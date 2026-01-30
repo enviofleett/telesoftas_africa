@@ -1,0 +1,82 @@
+.section {
+    padding: 100px 5%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* For containing background shapes */
+}
+
+/* Subtle background grey boxes */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    background: #f5f5f5;
+    /* Very subtle grey */
+    border-radius: 20px;
+    opacity: 0.6;
+    z-index: 0;
+    transform: rotate(-10deg);
+}
+
+.section::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 400px;
+    height: 400px;
+    background: #f0f0f0;
+    border-radius: 50% 20% 50% 20%;
+    opacity: 0.5;
+    z-index: 0;
+    transform: rotate(15deg);
+}
+
+.container {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+    /* Above background */
+}
+
+.pill {
+    padding: 10px 28px;
+    background: rgba(0, 0, 0, 0.05);
+    /* Light grey for light bg */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    color: #333;
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.description {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.25rem;
+    /* Reduced from 2rem */
+    line-height: 1.6;
+    color: #333;
+    font-weight: 400;
+    /* Lighter weight */
+}
+
+@media (max-width: 768px) {
+    .description {
+        font-size: 1.5rem;
+    }
+}

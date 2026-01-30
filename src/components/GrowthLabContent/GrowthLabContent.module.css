@@ -1,0 +1,173 @@
+.section {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    background-image: url('/sssss.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    padding-left: 100px;
+}
+
+.textContent {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-family: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 1.4;
+    color: #ffffff;
+    margin: 0;
+}
+
+.featureList {
+    list-style: disc;
+    padding-left: 24px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.featureList li {
+    font-family: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.description {
+    font-family: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #ffffff;
+    margin: 0;
+    max-width: 750px;
+}
+
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: #000000;
+    padding: 14px 24px;
+    border-radius: 30px;
+    font-family: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+    margin-top: 12px;
+}
+
+.ctaButton:hover {
+    background: #f0f0f0;
+    transform: translateX(4px);
+}
+
+.arrowIcon {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .arrowIcon {
+    transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+    .content {
+        padding-left: 60px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .featureList li {
+        font-size: 1.35rem;
+    }
+
+    .description {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        min-height: 500px;
+    }
+
+    .content {
+        padding: 60px 30px;
+    }
+
+    .title {
+        font-size: 1.35rem;
+    }
+
+    .featureList li {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .ctaButton {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 40px 20px;
+    }
+
+    .textContent {
+        gap: 16px;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .featureList li {
+        font-size: 1.1rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+}

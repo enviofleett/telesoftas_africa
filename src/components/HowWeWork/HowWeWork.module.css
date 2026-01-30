@@ -1,0 +1,150 @@
+.section {
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    padding: 120px 0;
+    overflow: hidden;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+}
+
+.backgroundLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Group 105.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
+    /* Increased slightly for better visibility */
+    pointer-events: none;
+    /* Relaxed gradient: 65% instead of 40% to show more pattern */
+    mask-image: radial-gradient(circle at 50% 50%, black 0%, transparent 65%);
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, black 0%, transparent 65%);
+}
+
+.container {
+    max-width: 100%;
+    /* Use full width */
+    margin: 0;
+    padding: 0 80px;
+    /* Increased side padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.leftContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 600px;
+    /* Limit width of left content */
+}
+
+.label {
+    color: #ff0055;
+    /* Approximate pink color from image */
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+    /* Further reduced from 12px */
+    letter-spacing: 1px;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 500;
+    margin: 0 0 24px 0;
+    /* Further reduced from 32px */
+    line-height: 1.1;
+}
+
+.description p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #999;
+    margin-bottom: 24px;
+    max-width: 480px;
+}
+
+.rightContent {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stepsBox {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 48px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    max-width: 500px;
+}
+
+.step {
+    margin-bottom: 0;
+}
+
+.stepTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.stepDescription {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #999;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 32px 0;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .rightContent {
+        justify-content: flex-start;
+    }
+
+    .stepsBox {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .description p {
+        font-size: 18px;
+    }
+
+    .stepsBox {
+        padding: 32px;
+    }
+}

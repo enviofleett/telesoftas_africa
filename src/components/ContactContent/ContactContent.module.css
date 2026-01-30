@@ -1,0 +1,232 @@
+.section {
+    padding: 180px 5% 100px 5%;
+    background: #fff;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Squares Pattern */
+.square {
+    position: absolute;
+    background: #f8f8f8;
+    /* Very subtle grey/off-white */
+    z-index: 0;
+}
+
+.square1 {
+    top: 10%;
+    left: 5%;
+    width: 120px;
+    height: 120px;
+    opacity: 0.6;
+}
+
+.square2 {
+    top: 20%;
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    opacity: 0.4;
+}
+
+.square3 {
+    bottom: 15%;
+    left: 10%;
+    width: 150px;
+    height: 150px;
+    opacity: 0.5;
+}
+
+.square4 {
+    top: 15%;
+    right: 15%;
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+}
+
+.square5 {
+    bottom: 20%;
+    right: 20%;
+    width: 60px;
+    height: 60px;
+    opacity: 0.4;
+}
+
+.square6 {
+    bottom: 10%;
+    right: 5%;
+    width: 180px;
+    height: 180px;
+    opacity: 0.5;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1400px;
+    /* Wider container */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    /* Horizontal layout */
+    align-items: flex-start;
+    /* Align top for better structure with unequal heights */
+    justify-content: space-between;
+    /* Spread columns */
+    gap: 120px;
+    /* More breathing space between columns */
+    padding-top: 40px;
+    /* Slight offset inside container */
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 48px;
+    /* More space between sections */
+    flex: 1;
+    max-width: 550px;
+}
+
+.heroText h2 {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    /* Reduced from 700 */
+    color: #333;
+    /* Lighter than #111 */
+    line-height: 1.1;
+    margin: 0 0 32px 0;
+    /* Significant space below title */
+}
+
+.heroText p {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 1.25rem;
+    color: #666;
+    line-height: 1.8;
+    /* More relaxed line height */
+    margin: 0;
+    padding-right: 20px;
+}
+
+/* Reuse existing social styling but align left */
+.label {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 1.1rem;
+    color: #999;
+    font-weight: 400;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.socialGrid {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    /* Left align */
+}
+
+/* Contact Info Styles */
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 1.1rem;
+    color: #666;
+    font-family: var(--font-inter), sans-serif;
+    line-height: 1.5;
+}
+
+.contactIcon {
+    font-size: 1.4rem;
+    color: #999;
+    margin-top: 2px;
+}
+
+.leftFooter {
+    margin-top: auto;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.9rem;
+    color: #999;
+    line-height: 1.6;
+}
+
+/* Right Column adjustments */
+.rightColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Form aligns right styling */
+    gap: 32px;
+}
+
+.followUsSection {
+    width: 100%;
+    max-width: 600px;
+    /* Match form width */
+    text-align: left;
+    padding-left: 20px;
+    /* Align somewhat with form internal padding visually */
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    /* Light grey icons initially */
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+    color: #333;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 40px 20px;
+        align-items: flex-start;
+    }
+
+    .leftColumn {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .rightColumn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .heroText h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .socialGrid {
+        gap: 24px;
+    }
+}

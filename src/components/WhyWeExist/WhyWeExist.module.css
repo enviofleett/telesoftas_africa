@@ -1,0 +1,103 @@
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Center the overall container area */
+    padding: 120px 87px 0 87px;
+    /* 87px margin from both edges of the screen, bottom 0 to connect to next section */
+    background: #fff;
+    color: #1a1a1a;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    /* Stretch to allow internal vertical alignment */
+    gap: 200px;
+    /* Large center gap matching reference image */
+}
+
+.leftContent {
+    flex: 0 0 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Top aligns title, bottom aligns subtext */
+}
+
+.title {
+    font-size: 84px;
+    font-weight: 500;
+    line-height: 1;
+    /* Tighter line height for top alignment */
+    margin: 0;
+    letter-spacing: -0.04em;
+    color: #1a1a1a;
+    white-space: nowrap;
+}
+
+.subtext {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #a0a0a0;
+    font-weight: 400;
+    margin: 0;
+}
+
+.subtext p {
+    margin: 0;
+}
+
+.rightContent {
+    flex: 0 1 760px;
+    padding-top: 8px;
+    /* Minor adjustment to align top of text with cap height of title */
+    text-align: left;
+}
+
+.description {
+    font-size: 28px;
+    line-height: 1.45;
+    /* Slightly increased for readability and line count */
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    max-width: 760px;
+    /* Adjusted to try and hit 6 lines */
+}
+
+@media (max-width: 1400px) {
+    .section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .container {
+        width: 100%;
+        gap: 50px;
+        height: auto;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .leftContent {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,95 @@
+.section {
+    width: 100%;
+    min-height: 600px;
+    background: #000 url('/tech.jpg') center center / cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Dim overlay + side gradients */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.85) 100%),
+        rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+.content {
+    max-width: 759px;
+    min-height: 503px;
+    margin-top: 89px;
+    margin-left: 98px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.themes {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.title {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.list {
+    list-style: disc;
+    padding-left: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.list li {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #fff;
+    font-weight: 400;
+}
+
+.description {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #fff;
+    font-weight: 400;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .section {
+        min-height: 500px;
+    }
+
+    .content {
+        margin-top: 60px;
+        margin-left: 24px;
+        margin-right: 24px;
+        gap: 100px;
+    }
+
+    .title {
+        font-size: 1.35rem;
+    }
+
+    .list li {
+        font-size: 1.15rem;
+    }
+
+    .description {
+        font-size: 1.15rem;
+    }
+}

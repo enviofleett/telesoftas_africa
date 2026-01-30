@@ -1,0 +1,87 @@
+.formCard {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.label {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+    background: #fff;
+    /* Ensure white bg */
+}
+
+.input::placeholder {
+    color: #aaa;
+}
+
+.input:focus {
+    border-color: #333;
+}
+
+/* Custom Select styling to match input */
+.select {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    background: #fff;
+    appearance: none;
+    /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%23333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    cursor: pointer;
+}
+
+.submitBtn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 18px 32px;
+    border-radius: 8px;
+    /* Slightly rounded as per image */
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    width: 100%;
+}
+
+.submitBtn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}

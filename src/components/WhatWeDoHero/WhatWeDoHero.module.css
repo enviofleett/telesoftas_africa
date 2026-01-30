@@ -1,0 +1,225 @@
+.section {
+    padding-top: 160px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 60px;
+    background: #fff;
+    min-height: 1100px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Accent bar on far left */
+.accentBar {
+    position: absolute;
+    left: 0;
+    top: 140px;
+    width: 6px;
+    height: 200px;
+    background: #d9d9d9;
+    z-index: 1;
+}
+
+/* Background Squares Pattern */
+.square {
+    position: absolute;
+    background: #f5f5f5;
+    z-index: 0;
+}
+
+.square1 {
+    top: 35%;
+    left: 2%;
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+}
+
+.square2 {
+    top: 55%;
+    left: 8%;
+    width: 70px;
+    height: 70px;
+    opacity: 0.4;
+}
+
+.square3 {
+    bottom: 10%;
+    left: 3%;
+    width: 120px;
+    height: 120px;
+    opacity: 0.5;
+}
+
+.square4 {
+    bottom: 25%;
+    right: 5%;
+    width: 80px;
+    height: 80px;
+    opacity: 0.4;
+}
+
+.square5 {
+    bottom: 5%;
+    right: 15%;
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    min-height: 870px;
+}
+
+.leftColumn {
+    flex: 1;
+    max-width: 550px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.label {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #e85a4f;
+    letter-spacing: 0.5px;
+}
+
+.intro {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #333;
+    font-weight: 400;
+}
+
+.serviceSection {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.serviceTitle {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+}
+
+.serviceList {
+    list-style: disc;
+    padding-left: 24px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.serviceList li {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #444;
+    font-weight: 400;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 8px 0;
+}
+
+.rightColumn {
+    position: absolute;
+    top: 56px;
+    right: 40px;
+}
+
+.imageWrapper {
+    width: 637px;
+    height: 809px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+    .rightColumn {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    .imageWrapper {
+        width: 100%;
+        max-width: 500px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 900px) {
+    .section {
+        padding-top: 120px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .leftColumn {
+        max-width: 100%;
+        padding-left: 20px;
+    }
+
+    .rightColumn {
+        position: relative;
+        justify-content: center;
+    }
+
+    .imageWrapper {
+        max-width: 100%;
+        height: 500px;
+    }
+
+    .accentBar {
+        top: 100px;
+        height: 150px;
+    }
+
+    .label {
+        font-size: 1.1rem;
+    }
+
+    .intro {
+        font-size: 1.2rem;
+    }
+
+    .serviceTitle {
+        font-size: 1.15rem;
+    }
+
+    .serviceList li {
+        font-size: 1.05rem;
+    }
+}

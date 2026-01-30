@@ -1,0 +1,42 @@
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 31.5px 60px 31.5px;
+    /* Reduced bottom padding to 60px to move next section up */
+    background: #fff;
+    /* White background covers the entire section area */
+    position: relative;
+    z-index: 1;
+}
+
+.imageWrapper {
+    width: 100%;
+    max-width: 100%;
+    /* Take full available space within the padding */
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    aspect-ratio: 1450 / 752;
+    /* Maintain the requested aspect ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+@media (max-width: 1450px) {
+    .section {
+        padding: 60px 20px 80px 20px;
+    }
+
+    .imageWrapper {
+        max-width: 100%;
+    }
+}

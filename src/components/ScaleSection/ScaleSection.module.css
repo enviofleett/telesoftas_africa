@@ -1,0 +1,86 @@
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 60px 87px 120px 87px;
+    /* Reduced top padding from 120px to 60px */
+    background: #fff;
+    color: #1a1a1a;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 120px;
+    /* Reduced gap to allow more space for content */
+}
+
+.leftContent {
+    flex: 0 0 650px;
+    /* Reduced width to push it more left */
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 72px;
+    /* Reduced to ensure 3 lines fit in the container */
+    font-weight: 500;
+    line-height: 1.05;
+    /* Slightly relaxed for better legibility with breaks */
+    margin: 0;
+    letter-spacing: -0.04em;
+    color: #1a1a1a;
+    white-space: pre-line;
+    /* Respect line breaks without premature wrapping */
+}
+
+.rightContent {
+    flex: 0 1 780px;
+    /* Increased to target 6-7 lines wrap */
+    padding-top: 10px;
+    text-align: left;
+}
+
+.description {
+    font-size: 28px;
+    line-height: 1.45;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+}
+
+@media (max-width: 1400px) {
+    .section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .container {
+        gap: 50px;
+        height: auto;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .leftContent {
+        width: 100%;
+    }
+}

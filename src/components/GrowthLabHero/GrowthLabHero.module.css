@@ -1,0 +1,134 @@
+.section {
+    padding-top: 160px;
+    padding-bottom: 80px;
+    padding-left: 40px;
+    padding-right: 60px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Accent bar on far left */
+.accentBar {
+    position: absolute;
+    left: 0;
+    top: 140px;
+    width: 6px;
+    height: 200px;
+    background: #d9d9d9;
+    z-index: 1;
+}
+
+/* Background Squares Pattern */
+.square {
+    position: absolute;
+    background: #f5f5f5;
+    z-index: 0;
+}
+
+.square1 {
+    top: 65%;
+    left: 2%;
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+}
+
+.square2 {
+    top: 85%;
+    left: 5%;
+    width: 70px;
+    height: 70px;
+    opacity: 0.4;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 550px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.label {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #e85a4f;
+    letter-spacing: 0.5px;
+}
+
+.intro {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.65rem;
+    line-height: 1.5;
+    color: #222;
+    font-weight: 500;
+    margin: 0;
+}
+
+.description {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 1.35rem;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .section {
+        padding-top: 120px;
+        padding-bottom: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .content {
+        max-width: 100%;
+        padding-left: 20px;
+    }
+
+    .accentBar {
+        top: 100px;
+        height: 150px;
+    }
+
+    .label {
+        font-size: 1.1rem;
+    }
+
+    .intro {
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+
+    .content {
+        padding-left: 15px;
+    }
+
+    .intro {
+        font-size: 1.15rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}

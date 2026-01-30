@@ -1,0 +1,213 @@
+.section {
+    padding: 120px 20px 60px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 40px;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto 80px;
+    font-weight: 400;
+}
+
+.subtitle em {
+    font-style: normal;
+    display: block;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 40px;
+    padding: 60px 40px 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card1 .type {
+    color: #000;
+}
+
+.card1 {
+    background-color: #f9f9f9;
+    color: #000;
+    /* Geometric background pattern */
+    background-image:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%),
+        linear-gradient(315deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%);
+    background-position: 40px 0, 40px 0, 0 0, 0 0;
+    background-size: 80px 80px;
+    background-repeat: repeat;
+}
+
+.card2 {
+    background: radial-gradient(86.32% 59.23% at 50% 72.22%, #5AD3FF 0%, #4E61FF 100%);
+    color: #fff;
+}
+
+.card3 {
+    background-color: #000;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: #fff;
+}
+
+.decorativeSquare {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card1 .decorativeSquare {
+    background-color: rgba(0, 0, 0, 0.03);
+    top: 10%;
+    right: -10%;
+    transform: rotate(15deg);
+}
+
+.card2 .decorativeSquare {
+    background-color: rgba(255, 255, 255, 0.1);
+    top: 20%;
+    right: -5%;
+    transform: rotate(-10deg);
+}
+
+.card3 .decorativeSquare {
+    background-color: rgba(255, 255, 255, 0.08);
+    top: -5%;
+    right: 5%;
+    transform: rotate(20deg);
+}
+
+.cardContent {
+    position: relative;
+    z-index: 2;
+}
+
+.type {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.btnDark {
+    background-color: #000;
+    color: #fff;
+}
+
+.btnLight {
+    background-color: #fff;
+    color: #000;
+}
+
+.button:hover {
+    gap: 16px;
+    opacity: 0.9;
+}
+
+@media (max-width: 1200px) {
+    .cardsGrid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .card {
+        height: 500px;
+    }
+
+    .type {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 4rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 20px 40px;
+    }
+
+    .title {
+        font-size: 3rem;
+        margin-bottom: 24px;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 40px;
+    }
+
+    .card {
+        padding: 40px 30px 30px;
+    }
+}

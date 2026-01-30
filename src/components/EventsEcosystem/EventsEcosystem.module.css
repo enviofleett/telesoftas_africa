@@ -1,0 +1,207 @@
+.section {
+    position: relative;
+    background-color: #0b0d11;
+    color: #fff;
+    padding: 120px 0 80px 0;
+    /* Reduced bottom padding */
+    overflow: hidden;
+    min-height: 700px;
+    /* Reduced from 800px */
+    display: flex;
+    align-items: center;
+}
+
+.backgroundLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/mapbase.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.95;
+    /* Significantly increased for high visibility */
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Changed from center to align to top */
+    gap: 80px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.leftContent {
+    flex: 1;
+    max-width: 600px;
+}
+
+.label {
+    color: #ff0055;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 500;
+    margin: 0 0 32px 0;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    white-space: nowrap;
+    /* Force the title to stay on one line */
+}
+
+.description p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #9ea3ae;
+    margin-bottom: 24px;
+}
+
+.ctaButton {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 18px 32px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 40px;
+}
+
+.ctaButton:hover {
+    background: #f0f0f0;
+    transform: scale(1.02);
+}
+
+.rightContent {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    /* Reduced from 100px to be only slightly above Step 1 */
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 500px;
+}
+
+.verticalLine {
+    position: absolute;
+    top: 40px;
+    left: 28px;
+    width: 1px;
+    height: calc(100% - 100px);
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 0;
+}
+
+.step {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.numberCircle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #0b0d11;
+    flex-shrink: 0;
+}
+
+.stepContent {
+    padding-top: 12px;
+}
+
+.stepTitle {
+    font-size: 28px;
+    /* Increased from 20px */
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.stepDescription {
+    font-size: 20px;
+    /* Increased from 18px */
+    line-height: 1.6;
+    color: #9ea3ae;
+}
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 48px;
+    }
+
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 80px;
+    }
+
+    .rightContent {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .timeline {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .title {
+        font-size: 36px;
+        white-space: normal;
+        /* Allow wrapping on small screens */
+    }
+
+    .description p {
+        font-size: 18px;
+    }
+
+    .verticalLine {
+        display: none;
+    }
+}

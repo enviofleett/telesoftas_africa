@@ -1,0 +1,36 @@
+.section {
+    padding: 80px 5%;
+    background: #fff;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+}
+
+/* Typography styles matching the image */
+.content h2 {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-size: 2.5rem;
+    /* Much larger */
+    font-weight: 700;
+    color: #222;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.content h2:first-child {
+    margin-top: 0;
+}
+
+.content p {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 1.5rem;
+    /* Much larger body text */
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2.5rem;
+    max-width: 100%;
+    /* text spans full container */
+}

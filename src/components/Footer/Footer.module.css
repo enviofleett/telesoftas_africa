@@ -1,0 +1,149 @@
+.footer {
+    background-color: #0D0F14;
+    color: #ffffff;
+    padding: 120px 10%;
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+    position: relative;
+    z-index: 10;
+    margin-top: 0;
+    /* Eliminate black gap */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.brandSection {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: auto;
+    width: 200px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #94969C;
+    max-width: 420px;
+    margin: 0;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 12px;
+}
+
+.socialIcon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0D0F14;
+    transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-4px);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.columnTitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    color: #ffffff;
+}
+
+.linkList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.link {
+    font-size: 15px;
+    color: #94969C;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #ffffff;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 15px;
+    color: #94969C;
+    line-height: 1.5;
+}
+
+.contactIcon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    color: #ffffff;
+}
+
+@media (max-width: 1280px) {
+    .container {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 80px 5%;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .brandSection {
+        gap: 32px;
+    }
+}

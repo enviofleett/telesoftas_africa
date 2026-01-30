@@ -1,0 +1,129 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    /* Fixed fit to viewport */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* Align content to top (modified by padding) */
+    padding: 180px 10% 40px 10%;
+    /* Increased top for navbar, reduced bottom for space */
+    overflow: hidden;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url("/TeleSoftasLagos-122 1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    text-align: left;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    /* Take available space */
+    justify-content: center;
+    /* Center vertically in that space */
+}
+
+.title {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-weight: 600;
+    font-size: 96px;
+    /* Reduced to save space */
+    line-height: 1.1;
+    letter-spacing: -0.06em;
+    color: #fff;
+    margin-bottom: 2rem;
+    /* Reduced margin */
+}
+
+.pinkText {
+    background: var(--growth-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+}
+
+.convButton {
+    background: #fff;
+    color: #000;
+    padding: 1.25rem 2.5rem;
+    border-radius: 100px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 0;
+    /* Let flex gap or subtext margin handle spacing */
+    min-width: 240px;
+}
+
+.arrowIcon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.convButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.footerSubtext {
+    position: relative;
+    max-width: 500px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #fff;
+    opacity: 0.9;
+    z-index: 3;
+    margin-top: 0;
+    /* Pushed by flex content */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 5%;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .footerSubtext {
+        left: 5%;
+        bottom: 2rem;
+        font-size: 0.9rem;
+    }
+}
