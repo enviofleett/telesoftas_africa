@@ -25,34 +25,7 @@ This is a modern web application built with [Next.js](https://nextjs.org), integ
    RESEND_API_KEY=your_resend_api_key
    ```
 
-### Database Setup (Supabase)
 
-1. Go to your Supabase SQL Editor.
-2. Run the following SQL to create the `posts` table and set up Row Level Security (RLS):
-
-```sql
--- Create the posts table
-CREATE TABLE posts (
-  id TEXT PRIMARY KEY,
-  title TEXT NOT NULL,
-  category TEXT,
-  description TEXT,
-  image_url TEXT,
-  content TEXT,
-  author TEXT,
-  read_time TEXT,
-  created_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- Enable RLS
-ALTER TABLE posts ENABLE ROW LEVEL SECURITY;
-
--- Public read access
-CREATE POLICY "Allow public read access" ON posts FOR SELECT TO public USING (true);
-
--- Authenticated full access (for Admin)
-CREATE POLICY "Allow authenticated full access" ON posts FOR ALL TO authenticated USING (true) WITH CHECK (true);
-```
 
 ### Authentication & Admin Access
 
