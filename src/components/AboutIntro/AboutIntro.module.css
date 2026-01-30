@@ -75,8 +75,58 @@
     /* Lighter weight */
 }
 
+@media (max-width: 1024px) {
+    .section::before {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section::after {
+        width: 250px;
+        height: 250px;
+    }
+}
+
 @media (max-width: 768px) {
+    .section {
+        padding: 60px 5%;
+    }
+
+    .section::before,
+    .section::after {
+        display: none;
+    }
+
+    .container {
+        gap: 20px;
+    }
+
+    .pill {
+        font-size: 0.8rem;
+        padding: 8px 20px;
+    }
+
     .description {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 40px 16px;
+    }
+
+    .container {
+        gap: 16px;
+    }
+
+    .pill {
+        font-size: 0.75rem;
+        padding: 8px 16px;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 }

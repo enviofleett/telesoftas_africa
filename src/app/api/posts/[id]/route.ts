@@ -3,13 +3,14 @@ import { updatePost, deletePost, getPostById, Post } from '@/lib/posts';
 import path from 'path';
 import { writeFile } from 'fs/promises';
 import fs from 'fs';
+import { supabase } from '@/lib/supabase';
 
 export async function GET(
     request: Request,
     { params }: { params: Promise<{ id: string }> }
 ) {
     const { id } = await params;
-    const post = getPostById(id);
+    const post = await getPostById(id);
     if (post) {
         return NextResponse.json(post);
     }
@@ -21,6 +22,12 @@ export async function PUT(
     { params }: { params: Promise<{ id: string }> }
 ) {
     try {
+        // Security check: Verify session
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) {
+            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        }
+
         const { id } = await params;
         const formData = await request.formData();
 
@@ -60,7 +67,7 @@ export async function PUT(
             updates.imageUrl = `/uploads/${filename}`;
         }
 
-        const updated = updatePost(id, updates);
+        const updated = await updatePost(id, updates);
         if (updated) {
             return NextResponse.json({ success: true, post: updated });
         }
@@ -76,8 +83,14 @@ export async function DELETE(
     { params }: { params: Promise<{ id: string }> }
 ) {
     try {
+        // Security check: Verify session
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) {
+            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        }
+
         const { id } = await params;
-        const deleted = deletePost(id);
+        const deleted = await deletePost(id);
         if (deleted) {
             return NextResponse.json({ success: true });
         }

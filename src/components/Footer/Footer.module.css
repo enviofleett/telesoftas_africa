@@ -147,3 +147,40 @@
         gap: 32px;
     }
 }
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 60px 20px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+    .container {
+        gap: 40px;
+    }
+
+    .logo {
+        width: 160px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .columnTitle {
+        font-size: 18px;
+    }
+
+    .link {
+        font-size: 14px;
+    }
+
+    .socialIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contactItem {
+        font-size: 14px;
+    }
+}

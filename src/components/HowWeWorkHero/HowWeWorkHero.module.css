@@ -91,37 +91,90 @@
 }
 
 @media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        padding: 0 40px;
-        gap: 60px;
-    }
-
-    .description {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 768px) {
     .section {
-        padding-top: 120px;
-        padding-bottom: 60px;
+        padding-top: 140px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .container {
-        padding: 0 24px;
+        padding: 0;
         gap: 40px;
     }
 
+    .leftColumn {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
     .rightColumn {
-        gap: 32px;
+        flex: 0 0 auto;
+        width: 100%;
+        border-left: none;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2x2 grid for horizontal look */
+        gap: 30px;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 40px;
+    }
+
+    .item {
+        padding: 0;
+    }
+
+    .itemTitle {
+        font-size: 20px;
+    }
+
+    .itemText {
+        font-size: 16px;
+    }
+
+    .divider {
+        display: none;
     }
 
     .description {
         font-size: 20px;
     }
+}
 
-    .imageWrapper {
-        border-radius: 16px;
+@media (max-width: 768px) {
+    .section {
+        padding-top: 100px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .rightColumn {
+        grid-template-columns: 1fr;
+        /* Stack only on narrow mobile but keep grid gap */
+        border-top: 1px solid #e0e0e0;
+        padding-top: 32px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding-top: 90px;
+        padding-bottom: 40px;
+    }
+
+    .leftColumn {
+        gap: 24px;
+    }
+
+    .rightColumn {
+        gap: 24px;
+    }
+
+    .itemTitle {
+        font-size: 18px;
     }
 }

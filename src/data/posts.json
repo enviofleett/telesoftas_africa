@@ -1,56 +1,78 @@
 [
-    {
-        "id": "1",
-        "title": "Don’t Wait. The Purpose Of Our Lives Is To Be Happy!",
-        "category": "Lifestyle",
-        "description": "Of Course The Puget Sound Is Very Watery, And Where There Is Water, There Are Boats. Today Is The Grand Opening Of Boating Season When Traffic Gets Stalled In The University District (UW) While The Montlake Bridge",
-        "imageUrl": "/mane.jpg",
-        "createdAt": "2023-01-01T00:00:00.000Z",
-        "content": "<h2>Don’t Wait. The Purpose Of Our Lives Is To Be Happy!</h2><p>upon arrival, your senses will be rewarded with the pleasant scent of lemongrass oil used to clean the natural wood found throughout the room, creating a relaxing atmosphere within the space. a wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole heart. i am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. i am so happy, my dear friend, so absorbed in the exquisite.</p><h2>Not How Long, But How Well You Have Lived Is The Main Thing.</h2><p>when you are ready to indulge your sense of excitement, check out the range of water- sports opportunities at the resort’s on-site water-sports center. want to leave your stress on the water? the resort has kayaks, paddleboards, or the low-key pedal boats. snorkeling equipment is available as well, so you can experience the ever-changing undersea environment.not only do visitors to a bed and breakfast get a unique perspective on the place they are visiting, they have options for special packages not available in other hotel settings. bed and breakfasts can partner easily with local businesses for a smoothly organized and highly personalized vacation experience. the fife and drum inn offers options such as the historic triangle package that includes three nights at the inn, breakfasts, and admissions to historic williamsburg, jamestown, and yorktown. bed and breakfasts also lend themselves to romance. part of the charm of a bed and breakfast is the uniqueness; art, décor, and food are integrated to create a complete experience. for example, the fife and drum retains the colonial feel of the area in all its guest rooms. special features include antique furnishings, elegant four poster beds in some guest rooms, as well folk art and artifacts from the restoration period of the historic area available for guests to enjoy.</p>"
-    },
-    {
-        "id": "2",
-        "title": "How To Choose The Right Laptop For Programming",
-        "category": "Tech",
-        "description": "Choosing The Right Laptop For Programming Can Be A Tough Process. It's Easy To Get Confused While Searching The Various Options. There Are Many Different Laptop Models Out There, Each With A Different Set Of Trade-Offs",
-        "imageUrl": "/manb.jpg",
-        "createdAt": "2023-01-02T00:00:00.000Z",
-        "content": "<p>Content placeholder for Laptop post...</p>"
-    },
-    {
-        "id": "3",
-        "title": "How We Built The First Real Self-Driving Car",
-        "category": "Innovation",
-        "description": "Electric Self-Driving Cars Will Save Millions Of Lives And Significantly Accelerate The World's Transition To Sustainable Energy. But Only When",
-        "imageUrl": "/manc.jpg",
-        "createdAt": "2023-01-03T00:00:00.000Z",
-        "content": "<p>Content placeholder for Self-Driving Car post...</p>"
-    },
-    {
-        "id": "4",
-        "title": "How To Persuade Your Parents To Buy Fast Food",
-        "category": "Health",
-        "description": "Parents Often Don't Want To Buy Fast Food. They May Be Worried That It's Too Expensive, Unhealthy, Or Not Worth The Effort And Time.",
-        "imageUrl": "/mand.jpg",
-        "createdAt": "2023-01-04T00:00:00.000Z",
-        "content": "<p>Content placeholder for Fast Food post...</p>"
-    },
-    {
-        "id": "5",
-        "title": "The Future of Autonomous Transportation",
-        "category": "Tech",
-        "description": "Examining how self-driving vehicles are set to revolutionize public transport and personal commute in the coming decade.",
-        "imageUrl": "/car.jpg",
-        "createdAt": "2023-01-05T00:00:00.000Z",
-        "content": "<p>Content placeholder for Autonomous Transportation post...</p>"
-    },
-    {
-        "id": "6",
-        "title": "Mobile Photography: A New Era",
-        "category": "Creativity",
-        "description": "How modern smartphones are challenging potential DSLR cameras and changing the landscape of professional photography.",
-        "imageUrl": "/phone.jpg",
-        "createdAt": "2023-01-06T00:00:00.000Z",
-        "content": "<p>Content placeholder for Mobile Photography post...</p>"
-    }
+  {
+    "id": "1",
+    "title": "Don’t Wait. The Purpose Of Our Lives Is To Be Happy!",
+    "category": "Lifestyle",
+    "description": "Of Course The Puget Sound Is Very Watery, And Where There Is Water, There Are Boats. Today Is The Grand Opening Of Boating Season When Traffic Gets Stalled In The University District (UW) While The Montlake Bridge",
+    "imageUrl": "/mane.jpg",
+    "createdAt": "2023-01-01T00:00:00.000Z",
+    "content": "<h2>Don’t Wait. The Purpose Of Our Lives Is To Be Happy!</h2><p>upon arrival, your senses will be rewarded with the pleasant scent of lemongrass oil used to clean the natural wood found throughout the room, creating a relaxing atmosphere within the space. a wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole heart. i am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. i am so happy, my dear friend, so absorbed in the exquisite.</p><h2>Not How Long, But How Well You Have Lived Is The Main Thing.</h2><p>when you are ready to indulge your sense of excitement, check out the range of water- sports opportunities at the resort’s on-site water-sports center. want to leave your stress on the water? the resort has kayaks, paddleboards, or the low-key pedal boats. snorkeling equipment is available as well, so you can experience the ever-changing undersea environment.not only do visitors to a bed and breakfast get a unique perspective on the place they are visiting, they have options for special packages not available in other hotel settings. bed and breakfasts can partner easily with local businesses for a smoothly organized and highly personalized vacation experience. the fife and drum inn offers options such as the historic triangle package that includes three nights at the inn, breakfasts, and admissions to historic williamsburg, jamestown, and yorktown. bed and breakfasts also lend themselves to romance. part of the charm of a bed and breakfast is the uniqueness; art, décor, and food are integrated to create a complete experience. for example, the fife and drum retains the colonial feel of the area in all its guest rooms. special features include antique furnishings, elegant four poster beds in some guest rooms, as well folk art and artifacts from the restoration period of the historic area available for guests to enjoy.</p>"
+  },
+  {
+    "id": "2",
+    "title": "How To Choose The Right Laptop For Programming",
+    "category": "Tech",
+    "description": "Choosing The Right Laptop For Programming Can Be A Tough Process. It's Easy To Get Confused While Searching The Various Options. There Are Many Different Laptop Models Out There, Each With A Different Set Of Trade-Offs",
+    "imageUrl": "/manb.jpg",
+    "createdAt": "2023-01-02T00:00:00.000Z",
+    "content": "<p>Content placeholder for Laptop post...</p>"
+  },
+  {
+    "id": "3",
+    "title": "How We Built The First Real Self-Driving Car",
+    "category": "Innovation",
+    "description": "Electric Self-Driving Cars Will Save Millions Of Lives And Significantly Accelerate The World's Transition To Sustainable Energy. But Only When",
+    "imageUrl": "/manc.jpg",
+    "createdAt": "2023-01-03T00:00:00.000Z",
+    "content": "<p>Content placeholder for Self-Driving Car post...</p>"
+  },
+  {
+    "id": "4",
+    "title": "How To Persuade Your Parents To Buy Fast Food",
+    "category": "Health",
+    "description": "Parents Often Don't Want To Buy Fast Food. They May Be Worried That It's Too Expensive, Unhealthy, Or Not Worth The Effort And Time.",
+    "imageUrl": "/mand.jpg",
+    "createdAt": "2023-01-04T00:00:00.000Z",
+    "content": "<p>Content placeholder for Fast Food post...</p>"
+  },
+  {
+    "id": "5",
+    "title": "The Future of Autonomous Transportation",
+    "category": "Tech",
+    "description": "Examining how self-driving vehicles are set to revolutionize public transport and personal commute in the coming decade.",
+    "imageUrl": "/car.jpg",
+    "createdAt": "2023-01-05T00:00:00.000Z",
+    "content": "<p>Content placeholder for Autonomous Transportation post...</p>"
+  },
+  {
+    "id": "6",
+    "title": "Mobile Photography: A New Era",
+    "category": "Creativity",
+    "description": "How modern smartphones are challenging potential DSLR cameras and changing the landscape of professional photography.",
+    "imageUrl": "/phone.jpg",
+    "createdAt": "2023-01-06T00:00:00.000Z",
+    "content": "<p>Content placeholder for Mobile Photography post...</p>"
+  },
+  {
+    "id": "1769767462568",
+    "title": "nhbgfvcdzasecdfvgh",
+    "category": "tech",
+    "description": "etryrbevfcdviewluicbevu",
+    "content": "bwep;vujrv3wegtrnhgbfvsdcscv",
+    "author": "12werbg",
+    "readTime": "20mins",
+    "imageUrl": "/uploads/1769767462567-screenshot-2025-12-29_13-08-27.png",
+    "createdAt": "2026-01-30T10:04:22.568Z"
+  },
+  {
+    "id": "1769767464059",
+    "title": "nhbgfvcdzasecdfvgh",
+    "category": "tech",
+    "description": "etryrbevfcdviewluicbevu",
+    "content": "bwep;vujrv3wegtrnhgbfvsdcscv",
+    "author": "12werbg",
+    "readTime": "20mins",
+    "imageUrl": "/uploads/1769767464056-screenshot-2025-12-29_13-08-27.png",
+    "createdAt": "2026-01-30T10:04:24.059Z"
+  }
 ]

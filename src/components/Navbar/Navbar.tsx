@@ -6,6 +6,7 @@ import styles from "./Navbar.module.css";
 
 export default function Navbar() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     // Close dropdown when clicking outside
@@ -20,6 +21,18 @@ export default function Navbar() {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
+    // Prevent body scroll when mobile menu is open
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMobileMenuOpen]);
+
     const dropdownLinks = [
         { href: "/what-we-do", label: "What We Do" },
         { href: "/partnerships", label: "Partnerships" },
@@ -27,6 +40,16 @@ export default function Navbar() {
         { href: "/events-ecosystem", label: "Events & Ecosystem" },
         { href: "/growth-labs", label: "Growth Labs" },
     ];
+
+    const mainLinks = [
+        { href: "/", label: "Home" },
+        { href: "/insights", label: "Insights" },
+        { href: "/about", label: "About" },
+        { href: "/contact", label: "Contact" },
+        { href: "/proof", label: "Proof" },
+    ];
+
+    const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
     return (
         <nav className={styles.navbar}>
@@ -41,6 +64,7 @@ export default function Navbar() {
                     </Link>
                 </div>
 
+                {/* Desktop Navigation */}
                 <div className={styles.navLinks}>
                     <Link href="/" className={styles.link}>Home</Link>
                     <Link href="/insights" className={styles.link}>Insights</Link>
@@ -84,6 +108,52 @@ export default function Navbar() {
                             ))}
                         </div>
                     )}
+                </div>
+
+                {/* Mobile Hamburger Button */}
+                <button
+                    className={styles.hamburger}
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label="Toggle mobile menu"
+                >
+                    <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.hamburgerLineOpen1 : ''}`}></span>
+                    <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.hamburgerLineOpen2 : ''}`}></span>
+                    <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.hamburgerLineOpen3 : ''}`}></span>
+                </button>
+            </div>
+
+            {/* Mobile Menu Overlay */}
+            <div className={`${styles.mobileMenuOverlay} ${isMobileMenuOpen ? styles.mobileMenuOverlayOpen : ''}`} onClick={closeMobileMenu}></div>
+
+            {/* Mobile Menu */}
+            <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+                <div className={styles.mobileMenuContent}>
+                    <div className={styles.mobileMenuSection}>
+                        <span className={styles.mobileMenuLabel}>Navigation</span>
+                        {mainLinks.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className={styles.mobileMenuLink}
+                                onClick={closeMobileMenu}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </div>
+                    <div className={styles.mobileMenuSection}>
+                        <span className={styles.mobileMenuLabel}>Explore Telesoftas</span>
+                        {dropdownLinks.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className={styles.mobileMenuLink}
+                                onClick={closeMobileMenu}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </div>
         </nav>

@@ -1,5 +1,4 @@
-import fs from 'fs';
-import path from 'path';
+import { supabase } from './supabase';
 
 export interface Post {
     id: string;
@@ -13,49 +12,124 @@ export interface Post {
     readTime?: string;
 }
 
-const dataFile = path.join(process.cwd(), 'src', 'data', 'posts.json');
-
-export function getPosts(): Post[] {
+export async function getPosts(): Promise<Post[]> {
     try {
-        if (!fs.existsSync(dataFile)) {
-            return [];
-        }
-        const fileContents = fs.readFileSync(dataFile, 'utf8');
-        return JSON.parse(fileContents);
+        const { data, error } = await supabase
+            .from('posts')
+            .select('*')
+            .order('created_at', { ascending: false });
+
+        if (error) throw error;
+
+        return (data || []).map(post => ({
+            id: post.id,
+            title: post.title,
+            category: post.category,
+            description: post.description,
+            imageUrl: post.image_url,
+            createdAt: post.created_at,
+            content: post.content,
+            author: post.author,
+            readTime: post.read_time
+        }));
     } catch (error) {
         console.error('Error reading posts:', error);
         return [];
     }
 }
 
-export function savePost(post: Post) {
-    const posts = getPosts();
-    posts.push(post);
-    fs.writeFileSync(dataFile, JSON.stringify(posts, null, 2));
-}
+export async function savePost(post: Post) {
+    const { error } = await supabase
+        .from('posts')
+        .insert({
+            id: post.id,
+            title: post.title,
+            category: post.category,
+            description: post.description,
+            image_url: post.imageUrl,
+            content: post.content,
+            author: post.author,
+            read_time: post.readTime,
+            created_at: post.createdAt
+        });
 
-export function updatePost(id: string, updatedPost: Partial<Post>) {
-    const posts = getPosts();
-    const index = posts.findIndex(p => p.id === id);
-    if (index !== -1) {
-        posts[index] = { ...posts[index], ...updatedPost };
-        fs.writeFileSync(dataFile, JSON.stringify(posts, null, 2));
-        return posts[index];
+    if (error) {
+        console.error('Error saving post:', error);
+        throw error;
     }
-    return null;
 }
 
-export function deletePost(id: string) {
-    const posts = getPosts();
-    const filteredPosts = posts.filter(p => p.id !== id);
-    if (posts.length !== filteredPosts.length) {
-        fs.writeFileSync(dataFile, JSON.stringify(filteredPosts, null, 2));
-        return true;
+export async function updatePost(id: string, updatedPost: Partial<Post>) {
+    const updates: any = {};
+    if (updatedPost.title) updates.title = updatedPost.title;
+    if (updatedPost.category) updates.category = updatedPost.category;
+    if (updatedPost.description) updates.description = updatedPost.description;
+    if (updatedPost.imageUrl) updates.image_url = updatedPost.imageUrl;
+    if (updatedPost.content) updates.content = updatedPost.content;
+    if (updatedPost.author) updates.author = updatedPost.author;
+    if (updatedPost.readTime) updates.read_time = updatedPost.readTime;
+
+    const { data, error } = await supabase
+        .from('posts')
+        .update(updates)
+        .eq('id', id)
+        .select()
+        .single();
+
+    if (error) {
+        console.error('Error updating post:', error);
+        throw error;
     }
-    return false;
+
+    return {
+        id: data.id,
+        title: data.title,
+        category: data.category,
+        description: data.description,
+        imageUrl: data.image_url,
+        createdAt: data.created_at,
+        content: data.content,
+        author: data.author,
+        readTime: data.read_time
+    };
 }
 
-export function getPostById(id: string): Post | undefined {
-    const posts = getPosts();
-    return posts.find((post) => post.id === id);
+export async function deletePost(id: string) {
+    const { error } = await supabase
+        .from('posts')
+        .delete()
+        .eq('id', id);
+
+    if (error) {
+        console.error('Error deleting post:', error);
+        return false;
+    }
+    return true;
+}
+
+export async function getPostById(id: string): Promise<Post | undefined> {
+    try {
+        const { data, error } = await supabase
+            .from('posts')
+            .select('*')
+            .eq('id', id)
+            .single();
+
+        if (error) throw error;
+
+        return {
+            id: data.id,
+            title: data.title,
+            category: data.category,
+            description: data.description,
+            imageUrl: data.image_url,
+            createdAt: data.created_at,
+            content: data.content,
+            author: data.author,
+            readTime: data.read_time
+        };
+    } catch (error) {
+        console.error('Error fetching post by ID:', error);
+        return undefined;
+    }
 }

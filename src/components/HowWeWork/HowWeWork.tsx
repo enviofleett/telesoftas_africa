@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './HowWeWork.module.css';
 
 const HowWeWork = () => {
@@ -23,12 +24,21 @@ const HowWeWork = () => {
 
     return (
         <section className={styles.section}>
-            <div className={styles.backgroundLayer}></div>
             <div className={styles.container}>
                 <div className={styles.leftContent}>
-                    <span className={styles.label}>Purpose</span>
+                    <div className={styles.imageBox}>
+                        <Image
+                            src="/TeleSoftasLagos-139 1.png"
+                            alt="Team working together"
+                            fill
+                            className={styles.featuredImage}
+                        />
+                    </div>
+
                     <h2 className={styles.title}>How we work</h2>
-                    <div className={styles.description}>
+                    <span className={styles.label}>Purpose</span>
+
+                    <div className={styles.mainDescription}>
                         <p>Operationalise the brand promise.</p>
                         <p>Being the best partner for growth requires more than capability. It requires clarity, discipline, and shared responsibility. Our approach ensures growth is not accidental, but engineered.</p>
                     </div>

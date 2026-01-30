@@ -67,7 +67,7 @@
     /* Restored to original height */
     background-size: cover;
     background-position: center;
-    border-radius: 40px;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -107,11 +107,11 @@
     background: #fff;
     color: #000;
     border: none;
-    padding: 16px 32px;
-    border-radius: 100px;
+    padding: 12px 24px;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 12px;
     cursor: pointer;
@@ -175,24 +175,102 @@
     }
 
     .container {
-        padding: 0 32px;
+        padding: 0 20px;
+    }
+
+    .header {
+        margin-bottom: 48px;
     }
 
     .title {
         font-size: 48px;
+        margin-bottom: 24px;
     }
 
     .description p {
         font-size: 18px;
     }
 
+    .cardsScroll {
+        padding: 0 20px 40px 20px;
+        margin: 0 -20px;
+        gap: 24px;
+    }
+
     .card {
-        flex: 0 0 320px;
-        height: 480px;
-        padding: 32px;
+        flex: 0 0 300px;
+        min-width: 280px;
+        height: 450px;
+        padding: 28px;
     }
 
     .cardTitle {
-        font-size: 24px;
+        font-size: 22px;
+    }
+
+    .cardDescription {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .description p {
+        font-size: 16px;
+    }
+
+    .scrollWrapper {
+        margin-top: 40px;
+    }
+
+    .cardsScroll {
+        padding: 0 16px 30px 16px;
+        margin: 0 -16px;
+        gap: 16px;
+    }
+
+    .card {
+        flex: 0 0 85vw;
+        min-width: 260px;
+        height: 400px;
+        padding: 24px;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .cardDescription {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .exploreBtn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .navigation {
+        bottom: -80px;
+        gap: 12px;
+    }
+
+    .navBtn {
+        width: 48px;
+        height: 48px;
     }
 }

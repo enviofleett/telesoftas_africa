@@ -40,7 +40,7 @@
     background: #f5f5f5;
     border: none;
     padding: 10px 24px;
-    border-radius: 6px;
+    border-radius: 10px;
     font-family: var(--font-inter), sans-serif;
     font-weight: 500;
     color: #333;
@@ -68,7 +68,7 @@
     color: inherit;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     background: #fff;
-    border-radius: 16px;
+    border-radius: 10px;
     padding: 1.25rem;
     /* Padding for card look */
     align-items: stretch;
@@ -86,7 +86,7 @@
 .imageContainer {
     width: 240px;
     flex-shrink: 0;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
     aspect-ratio: 16/10;

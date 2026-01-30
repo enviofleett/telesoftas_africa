@@ -85,3 +85,72 @@
     opacity: 0.9;
     transform: translateY(-1px);
 }
+
+.statusMessage {
+    padding: 12px;
+    border-radius: 6px;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.success {
+    background: #e6fffa;
+    color: #234e52;
+    border: 1px solid #b2f5ea;
+}
+
+.error {
+    background: #fff5f5;
+    color: #9b2c2c;
+    border: 1px solid #feb2b2;
+}
+
+@media (max-width: 768px) {
+    .formCard {
+        padding: 32px 24px;
+        gap: 20px;
+    }
+
+    .input,
+    .select {
+        padding: 14px;
+        font-size: 0.95rem;
+    }
+
+    .submitBtn {
+        padding: 16px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .formCard {
+        padding: 24px 16px;
+        gap: 16px;
+        border-radius: 10px;
+    }
+
+    .label {
+        font-size: 0.9rem;
+    }
+
+    .input,
+    .select {
+        padding: 12px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+    }
+
+    .submitBtn {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+        margin-top: 8px;
+        border-radius: 6px;
+    }
+
+    .statusMessage {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+}

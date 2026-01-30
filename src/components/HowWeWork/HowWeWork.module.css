@@ -2,78 +2,63 @@
     position: relative;
     background-color: #000;
     color: #fff;
-    padding: 120px 0;
+    padding: 120px 5%;
     overflow: hidden;
-    min-height: 800px;
-    display: flex;
-    align-items: center;
-}
-
-.backgroundLayer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/Group 105.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.35;
-    /* Increased slightly for better visibility */
-    pointer-events: none;
-    /* Relaxed gradient: 65% instead of 40% to show more pattern */
-    mask-image: radial-gradient(circle at 50% 50%, black 0%, transparent 65%);
-    -webkit-mask-image: radial-gradient(circle at 50% 50%, black 0%, transparent 65%);
 }
 
 .container {
-    max-width: 100%;
-    /* Use full width */
-    margin: 0;
-    padding: 0 80px;
-    /* Increased side padding */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    position: relative;
-    z-index: 1;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 80px;
+    align-items: flex-start;
 }
 
 .leftContent {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    max-width: 600px;
-    /* Limit width of left content */
+}
+
+.imageBox {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    /* Placeholder when no image */
+    margin-bottom: 60px;
+}
+
+.featuredImage {
+    object-fit: cover;
+}
+
+.title {
+    font-size: 80px;
+    font-weight: 500;
+    margin: 0 0 32px 0;
+    line-height: 1.05;
+    letter-spacing: -2px;
 }
 
 .label {
     color: #ff0055;
-    /* Approximate pink color from image */
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 8px;
-    /* Further reduced from 12px */
-    letter-spacing: 1px;
-}
-
-.title {
-    font-size: 64px;
+    font-size: 16px;
     font-weight: 500;
-    margin: 0 0 24px 0;
-    /* Further reduced from 32px */
-    line-height: 1.1;
+    margin-bottom: 40px;
+    display: block;
 }
 
-.description p {
-    font-size: 20px;
-    line-height: 1.6;
-    color: #999;
+.mainDescription p {
+    font-size: 22px;
+    line-height: 1.4;
+    color: #fff;
     margin-bottom: 24px;
-    max-width: 480px;
+    max-width: 600px;
+    font-weight: 300;
 }
 
 .rightContent {
@@ -83,14 +68,9 @@
 
 .stepsBox {
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 48px;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
-    max-width: 500px;
-}
-
-.step {
-    margin-bottom: 0;
+    padding: 60px 40px;
+    background: transparent;
+    width: 100%;
 }
 
 .stepTitle {
@@ -101,50 +81,129 @@
 }
 
 .stepDescription {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
-    color: #999;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.step {
+    display: block;
 }
 
 .divider {
     height: 1px;
     background: rgba(255, 255, 255, 0.1);
-    margin: 32px 0;
+    margin: 40px 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .container {
         grid-template-columns: 1fr;
+        max-width: 900px;
         gap: 60px;
     }
 
     .rightContent {
         justify-content: flex-start;
-    }
-
-    .stepsBox {
-        max-width: 100%;
+        width: 100%;
     }
 
     .title {
-        font-size: 48px;
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .stepsBox {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding: 40px 0;
+        border: none;
+    }
+
+    .step {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 32px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        height: 100%;
+    }
+
+    .divider {
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
     .section {
-        padding: 80px 0;
+        padding: 80px 24px;
     }
 
     .title {
-        font-size: 36px;
+        font-size: 44px;
     }
 
-    .description p {
+    .mainDescription p {
         font-size: 18px;
     }
 
+    .imageBox {
+        margin-bottom: 40px;
+    }
+
     .stepsBox {
-        padding: 32px;
+        grid-template-columns: 1fr;
+        /* Stack on small tablet, but with better design */
+        gap: 20px;
+    }
+
+    .step {
+        padding: 24px;
+        min-height: auto;
+    }
+
+    .stepTitle {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .stepDescription {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 60px 20px;
+    }
+
+    .leftContent {
+        padding: 0;
+    }
+
+    .title {
+        font-size: 32px;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+    }
+
+    .label {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .mainDescription p {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .stepsBox {
+        padding: 20px 0;
+    }
+
+    .step {
+        padding: 24px;
     }
 }

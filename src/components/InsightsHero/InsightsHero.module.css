@@ -80,6 +80,16 @@
     font-weight: 300;
 }
 
+@media (max-width: 1024px) {
+    .title {
+        font-size: 60px;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         padding: 140px 5% 60px 5%;
@@ -88,10 +98,41 @@
     }
 
     .title {
-        font-size: 3rem;
+        font-size: 48px;
+        white-space: normal;
+    }
+
+    .pill {
+        font-size: 0.95rem;
+        padding: 6px 24px;
     }
 
     .description {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 120px 16px 50px 16px;
+        min-height: 70vh;
+    }
+
+    .content {
+        gap: 1.5rem;
+    }
+
+    .pill {
+        font-size: 0.85rem;
+        padding: 6px 20px;
+        margin-bottom: 0.5rem;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .description {
+        font-size: 1rem;
     }
 }

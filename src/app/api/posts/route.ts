@@ -3,11 +3,17 @@ import { savePost, Post } from '@/lib/posts';
 import path from 'path';
 import { writeFile } from 'fs/promises';
 import fs from 'fs';
+import { supabase } from '@/lib/supabase';
 
 export const dynamic = 'force-dynamic';
 
 export async function POST(request: Request) {
     try {
+        // Security check: Verify session
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) {
+            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        }
         const formData = await request.formData();
         const title = formData.get('title') as string;
         const category = formData.get('category') as string;
@@ -45,7 +51,7 @@ export async function POST(request: Request) {
             createdAt: new Date().toISOString(),
         };
 
-        savePost(newPost);
+        await savePost(newPost);
 
         return NextResponse.json({ success: true, post: newPost });
     } catch (error) {
@@ -56,6 +62,6 @@ export async function POST(request: Request) {
 
 export async function GET() {
     const { getPosts } = await import('@/lib/posts'); // Dynamic import to avoid build time static gen issues if any
-    const posts = getPosts();
+    const posts = await getPosts();
     return NextResponse.json(posts);
 }

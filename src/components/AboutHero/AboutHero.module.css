@@ -32,3 +32,30 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
+
+@media (max-width: 1024px) {
+    .hero {
+        height: 70vh;
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        min-height: 400px;
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+        min-height: 320px;
+        padding: 0 16px;
+    }
+
+    .backgroundImage {
+        background-position: center center;
+    }
+}

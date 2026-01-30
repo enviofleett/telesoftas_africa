@@ -8,7 +8,7 @@ import styles from "../../page.module.css"; // Reuse main styles for container i
 
 // Generate static params for all posts
 export async function generateStaticParams() {
-    const posts = getPosts();
+    const posts = await getPosts();
     return posts.map((post) => ({
         id: post.id,
     }));
@@ -20,7 +20,7 @@ export default async function PostDetailPage({
     params: Promise<{ id: string }>;
 }) {
     const { id } = await params;
-    const post = getPostById(id);
+    const post = await getPostById(id);
 
     if (!post) {
         return <div>Post not found</div>;

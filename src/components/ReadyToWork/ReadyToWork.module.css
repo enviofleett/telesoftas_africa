@@ -1,61 +1,54 @@
 .section {
     position: relative;
-    background-color: #f9f9f9;
-    padding: 120px 0 160px 0;
-    /* Added bottom padding for breathing room */
-    overflow: hidden;
-    min-height: 900px;
-    color: #000000;
+    background-color: #fff;
+    width: 100%;
 }
 
 .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 10%;
-    /* Matches Hero section alignment */
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
-    z-index: 2;
+    width: 100%;
+    min-height: 900px;
 }
 
-.leftContent {
-    flex: 1;
-    max-width: 700px;
+.leftColumn {
+    flex: 0 0 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.contentWrap {
+    width: 100%;
+    max-width: 650px;
+    padding: 0 40px 0 100px;
+    /* Aligned with Hero section */
 }
 
 .label {
     display: inline-block;
-    padding: 4px 0;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     font-size: 18px;
     font-weight: 500;
-    background: linear-gradient(90.01deg, #FF0077 0.01%, #FF3800 20.03%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-family: inherit;
-    line-height: 1.2;
+    color: #ff0055;
 }
 
 .title {
-    font-size: 84px;
+    font-size: 80px;
     font-weight: 500;
-    line-height: 1;
-    margin: 0 0 48px 0;
+    line-height: 1.05;
+    margin: 0 0 40px 0;
     letter-spacing: -3px;
     color: #000;
-    white-space: nowrap;
 }
 
 .description {
-    font-size: 22px;
-    color: #000;
+    font-size: 20px;
+    color: #333;
     margin-bottom: 40px;
-    line-height: 1.4;
-    font-weight: 400;
-    max-width: 600px;
+    line-height: 1.5;
+    max-width: 580px;
 }
 
 .description b {
@@ -65,10 +58,10 @@
 .checklist {
     list-style: none;
     padding: 0;
-    margin: 0 0 100px 0;
+    margin: 0 0 80px 0;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
 }
 
 .checkItem {
@@ -77,7 +70,6 @@
     gap: 16px;
     font-size: 16px;
     color: #000;
-    font-weight: 400;
 }
 
 .checkIcon {
@@ -89,8 +81,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    font-size: 12px;
     flex-shrink: 0;
+    padding: 4px;
 }
 
 .profileCard {
@@ -101,11 +93,10 @@
 }
 
 .avatarWrapper {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #f0f0f0;
 }
 
 .avatar {
@@ -115,143 +106,158 @@
 }
 
 .profileInfo h4 {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 600;
     margin: 0;
     color: #000;
 }
 
 .profileInfo p {
-    font-size: 18px;
-    color: #000;
+    font-size: 16px;
+    color: #555;
     margin: 0;
-    font-weight: 400;
 }
 
 .startButton {
     background: #000;
     color: #fff;
-    border: none;
-    padding: 20px 40px;
-    border-radius: 100px;
-    font-size: 18px;
-    font-weight: 500;
-    display: flex;
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-flex;
     align-items: center;
     gap: 12px;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .startButton:hover {
     transform: scale(1.02);
+    background: #222;
 }
 
 .arrowIcon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 }
 
-.rightContent {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    /* Block is on the right */
-    padding-top: 70px;
-    /* Aligns with "Ready to work" title baseline */
-    margin-left: 0;
-    /* Removed fixed margin to allow flex-end to work */
+.rightColumn {
+    flex: 0 0 50%;
+    position: relative;
+    background-color: #000;
 }
 
-.strategyInfo {
-    width: fit-content;
-    /* Only take space needed */
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    text-align: left;
-    /* Text within the block is left-aligned */
-}
-
-.strategyTitle {
-    font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 12px;
-    color: #000;
-}
-
-.widgetDetails {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
-    /* List items align to the left of the block */
-}
-
-.detailItem {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 18px;
-    color: #000;
-    font-weight: 400;
-    flex-direction: row;
-}
-
-.widgetIcon {
-    width: 20px;
-    height: 20px;
-    color: #000;
-    flex-shrink: 0;
-}
-
-.polygonAsset {
-    position: absolute;
-    top: 380px;
-    /* Bring it up more to extend further down */
-    right: 0;
-    width: 1150px;
-    /* Increased size to extend further down */
-    height: auto;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 1;
-    object-fit: contain;
-    transform: translateX(50px);
-}
-
-@media (max-width: 1440px) {
-    .polygonAsset {
-        left: 800px;
-        width: 600px;
-    }
+.ctaImage {
+    object-fit: cover;
+    object-position: center;
 }
 
 @media (max-width: 1200px) {
     .title {
-        font-size: 64px;
-        white-space: normal;
+        font-size: 60px;
     }
 
-    .polygonAsset {
-        display: none;
-    }
-
-    .container {
-        padding: 0 5%;
+    .contentWrap {
+        padding: 0 40px;
     }
 }
 
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
-        gap: 60px;
+        min-height: auto;
     }
 
-    .rightContent {
-        padding-top: 0;
-        margin-left: 0;
+    .leftColumn,
+    .rightColumn {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .leftColumn {
+        justify-content: center;
+        padding: 80px 40px;
+    }
+
+    .contentWrap {
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checklist {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Horizontal feel on tablet */
+        gap: 24px;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .profileCard {
+        justify-content: center;
+    }
+
+    .rightColumn {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .leftColumn {
+        padding: 60px 24px;
+    }
+
+    .title {
+        font-size: 44px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .checklist {
+        grid-template-columns: 1fr;
+        /* Stack on smaller screens */
+        gap: 16px;
+    }
+
+    .rightColumn {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .leftColumn {
+        padding: 50px 20px;
+    }
+
+    .title {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .description {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .checklist {
+        margin-bottom: 40px;
+    }
+
+    .startButton {
+        width: auto;
+        min-width: 200px;
+        justify-content: center;
+        padding: 14px 24px;
+    }
+
+    .rightColumn {
+        height: 300px;
     }
 }

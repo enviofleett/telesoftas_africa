@@ -69,6 +69,14 @@
     max-width: 100%;
 }
 
+@media (max-width: 1024px) {
+    .content {
+        margin-left: 48px;
+        margin-right: 48px;
+        gap: 60px;
+    }
+}
+
 @media (max-width: 768px) {
     .section {
         min-height: 500px;
@@ -78,7 +86,7 @@
         margin-top: 60px;
         margin-left: 24px;
         margin-right: 24px;
-        gap: 100px;
+        gap: 50px;
     }
 
     .title {
@@ -91,5 +99,38 @@
 
     .description {
         font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        min-height: 400px;
+    }
+
+    .content {
+        margin-top: 40px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 40px;
+        gap: 40px;
+        min-height: auto;
+    }
+
+    .title {
+        font-size: 1.15rem;
+    }
+
+    .list {
+        gap: 6px;
+        padding-left: 20px;
+    }
+
+    .list li {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 }

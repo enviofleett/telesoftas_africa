@@ -84,11 +84,57 @@
         padding-right: 24px;
     }
 
+    .container {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .content {
+        gap: 28px;
+        padding: 24px 20px 24px 0;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
     .description {
         font-size: 20px;
     }
 
     .imageWrapper {
         border-radius: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding-top: 100px;
+        padding-bottom: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .container {
+        padding: 16px;
+        gap: 20px;
+        border-radius: 16px;
+    }
+
+    .content {
+        gap: 20px;
+        padding: 16px 0 16px 0;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .imageWrapper {
+        border-radius: 12px;
     }
 }

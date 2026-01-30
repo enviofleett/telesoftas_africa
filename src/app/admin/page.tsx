@@ -5,25 +5,47 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import styles from './admin.module.css';
 import { Post } from '@/lib/posts';
+import { supabase } from '@/lib/supabase';
+import { useRouter } from 'next/navigation';
 
 export default function AdminPage() {
     const [posts, setPosts] = useState<Post[]>([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
+    const [authLoading, setAuthLoading] = useState(true);
     const [message, setMessage] = useState<{ text: string, type: 'success' | 'error' } | null>(null);
     const [view, setView] = useState<'list' | 'form'>('list');
     const [editingPost, setEditingPost] = useState<Post | null>(null);
+    const router = useRouter();
 
     useEffect(() => {
-        fetchPosts();
+        checkUser();
     }, []);
+
+    async function checkUser() {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) {
+            router.push('/admin/login');
+        } else {
+            setAuthLoading(false);
+            fetchPosts();
+        }
+    }
+
+    async function handleLogout() {
+        await supabase.auth.signOut();
+        router.push('/admin/login');
+    }
 
     async function fetchPosts() {
         try {
+            setLoading(true);
             const res = await fetch('/api/posts');
             const data = await res.json();
             setPosts(data);
         } catch (error) {
             console.error('Failed to fetch posts:', error);
+        } finally {
+            setLoading(false);
         }
     }
 
@@ -90,15 +112,22 @@ export default function AdminPage() {
         setView('form');
     };
 
+    if (authLoading) {
+        return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: '#0a0a0a', color: 'white' }}>Loading...</div>;
+    }
+
     return (
         <main className={styles.main}>
             <Navbar />
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h1 className={styles.title}>Blog Management</h1>
-                    {view === 'list' && (
-                        <button onClick={startAdd} className={styles.addBtn}>+ New Post</button>
-                    )}
+                    <div style={{ display: 'flex', gap: '10px' }}>
+                        {view === 'list' && (
+                            <button onClick={startAdd} className={styles.addBtn}>+ New Post</button>
+                        )}
+                        <button onClick={handleLogout} className={styles.cancelBtn} style={{ border: '1px solid #333' }}>Logout</button>
+                    </div>
                 </div>
 
                 {message && (

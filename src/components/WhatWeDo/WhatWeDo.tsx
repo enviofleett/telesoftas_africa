@@ -1,25 +1,26 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './WhatWeDo.module.css';
 
 const WhatWeDo = () => {
     const cards = [
         {
-            title: "Digital Products & Platforms",
-            description: "Scalable software and systems built to last.",
-            className: styles.card1,
+            title: "Digital Strategy & Transformation",
+            description: "We help you navigate the complexities of the digital age with strategy-led initiatives that unlock new growth pathways.",
+            image: "/tower.jpg",
             btnClass: styles.btnDark
         },
         {
-            title: "Growth & Digital Transformation",
-            description: "Strategy-led initiatives that unlock efficiency and new growth pathways.",
-            className: styles.card2,
+            title: "Product Design & Engineering",
+            description: "From concept to code, we design and build scalable digital products and platforms that drive real, sustainable results.",
+            image: "/hands.jpg",
             btnClass: styles.btnLight
         },
         {
-            title: "Talent & Delivery Partnerships",
-            description: "High-performing teams embedded to deliver outcomes.",
-            className: styles.card3,
+            title: "Strategic Delivery Partnerships",
+            description: "Our high-performing teams embed with your organization to deliver outcomes and scale your digital capabilities.",
+            image: "/tech.jpg",
             btnClass: styles.btnLight
         }
     ];
@@ -34,8 +35,15 @@ const WhatWeDo = () => {
 
             <div className={styles.cardsGrid}>
                 {cards.map((card, index) => (
-                    <div key={index} className={`${styles.card} ${card.className}`}>
-                        <div className={styles.decorativeSquare}></div>
+                    <div key={index} className={styles.card}>
+                        <div className={styles.imageContainer}>
+                            <Image
+                                src={card.image}
+                                alt={card.title}
+                                fill
+                                className={styles.cardImage}
+                            />
+                        </div>
                         <div className={styles.cardContent}>
                             <h3 className={styles.type}>{card.title}</h3>
                             <p className={styles.description}>{card.description}</p>
