@@ -16,7 +16,7 @@ const EventsEcosystem = () => {
         },
         {
             number: 3,
-            title: "Curated Conversations",
+            title: "Ecosystem Participation",
             description: "Active involvement in communities where long-term partnerships form. We don't attend every event. We attend — or create — the right ones."
         }
     ];

@@ -29,7 +29,7 @@ export default function Hero() {
 
             <div className={styles.rightContent}>
                 <Image
-                    src="/mimssssssssss.jpeg"
+                    src="/telesoftas.jpeg"
                     alt="TeleSoftas Partner for Growth"
                     fill
                     className={styles.heroImage}

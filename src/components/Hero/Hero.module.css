@@ -95,7 +95,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 42%;
+    width: 45%;
     height: 100%;
     z-index: 1;
     filter: none;
@@ -120,8 +120,9 @@
 
 @media (max-width: 1024px) {
     .hero {
-        height: 100svh;
-        min-height: 600px;
+        height: 85vh;
+        /* Cut down from 100svh */
+        min-height: auto;
         position: relative;
         padding: 0;
         background: #000;
@@ -163,52 +164,63 @@
     }
 
     .leftContent {
-        max-width: 600px;
+        max-width: 700px;
         padding: 0;
         gap: 40px;
         align-items: center;
     }
 
     .title {
-        font-size: 52px;
-        line-height: 1.1;
+        font-size: 64px;
+        /* Increased from 52px */
+        line-height: 1.05;
         color: #fff;
+        letter-spacing: -2px;
     }
 
     .description {
-        font-size: 1.25rem;
+        font-size: 1.35rem;
         color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 20px;
+        margin-bottom: 24px;
+        max-width: 550px;
     }
 
     .convButton {
         width: auto !important;
         min-width: 0 !important;
-        padding: 16px 40px !important;
+        padding: 16px 44px !important;
         background: #fff;
         color: #000;
         white-space: nowrap;
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 768px) {
     .title {
-        font-size: 44px;
+        font-size: 56px;
+        /* Increased from 44px */
     }
 
     .description {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
     }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        height: 80vh;
+        /* Further cut down for mobile */
+    }
+
     .title {
-        font-size: 38px;
+        font-size: 48px;
+        /* Increased from 38px */
         letter-spacing: -1.5px;
     }
 
     .description {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .leftContent {
@@ -216,7 +228,7 @@
     }
 
     .convButton {
-        padding: 14px 32px !important;
+        padding: 14px 36px !important;
         font-size: 1rem;
     }
 }

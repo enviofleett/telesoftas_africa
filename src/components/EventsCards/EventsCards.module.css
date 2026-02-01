@@ -9,7 +9,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .cardsGrid {
@@ -22,81 +22,64 @@
 
 .card {
     border-radius: 10px;
-    padding: 40px 32px 32px;
+    padding: 60px 40px 40px;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 500px;
+    height: 600px;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
 }
 
 .card:hover {
     transform: translateY(-6px);
 }
 
-.card1 .type {
-    color: #000;
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
 }
 
 .card1 {
-    background-color: #f9f9f9;
-    color: #000;
-    background-image:
-        linear-gradient(135deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%),
-        linear-gradient(225deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%),
-        linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%),
-        linear-gradient(315deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%);
-    background-position: 40px 0, 40px 0, 0 0, 0 0;
-    background-size: 80px 80px;
-    background-repeat: repeat;
+    background-image: url('/pic1.jpg');
 }
 
 .card2 {
-    background: radial-gradient(86.32% 59.23% at 50% 72.22%, #5AD3FF 0%, #4E61FF 100%);
-    color: #fff;
+    background-image: url('/pic2.jpg');
 }
 
 .card3 {
-    background-color: #000;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
-    color: #fff;
+    background-image: url('/pic3.jpg');
 }
 
 .decorativeSquare {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    z-index: 1;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 2;
     pointer-events: none;
 }
 
-.card1 .decorativeSquare {
-    background-color: rgba(0, 0, 0, 0.03);
-    top: 10%;
-    right: -10%;
-    transform: rotate(15deg);
-}
-
+.card1 .decorativeSquare,
 .card2 .decorativeSquare {
-    background-color: rgba(255, 255, 255, 0.1);
-    top: 20%;
-    right: -5%;
-    transform: rotate(-10deg);
+    display: none;
 }
 
 .card3 .decorativeSquare {
-    background-color: rgba(255, 255, 255, 0.08);
-    top: -5%;
-    right: 5%;
-    transform: rotate(20deg);
+    bottom: 25%;
+    right: 10%;
 }
 
 .cardContent {
@@ -142,11 +125,10 @@
 @media (max-width: 1200px) {
     .cardsGrid {
         grid-template-columns: 1fr;
-        max-width: 500px;
     }
 
     .card {
-        height: 350px;
+        height: 450px;
     }
 }
 
@@ -165,7 +147,9 @@
     }
 
     .partnerButton {
-        padding: 20px 36px;
-        font-size: 1.1rem;
+        padding: 16px 28px;
+        font-size: 1rem;
+        width: 100%;
+        justify-content: center;
     }
 }

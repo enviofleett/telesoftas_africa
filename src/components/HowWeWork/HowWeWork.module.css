@@ -29,11 +29,12 @@
     overflow: hidden;
     background-color: #fff;
     /* Placeholder when no image */
-    margin-bottom: 60px;
+    margin-top: 60px;
 }
 
 .featuredImage {
-    object-fit: cover;
+    object-fit: contain;
+    padding: 60px;
 }
 
 .title {
