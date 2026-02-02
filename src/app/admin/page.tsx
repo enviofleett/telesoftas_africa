@@ -7,6 +7,7 @@ import styles from './admin.module.css';
 import { Post } from '@/lib/posts';
 import { supabase } from '@/lib/supabase';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function AdminPage() {
     const [posts, setPosts] = useState<Post[]>([]);
@@ -121,12 +122,28 @@ export default function AdminPage() {
             <Navbar />
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h1 className={styles.title}>Blog Management</h1>
-                    <div style={{ display: 'flex', gap: '10px' }}>
-                        {view === 'list' && (
-                            <button onClick={startAdd} className={styles.addBtn}>+ New Post</button>
-                        )}
-                        <button onClick={handleLogout} className={styles.cancelBtn} style={{ border: '1px solid #333' }}>Logout</button>
+                    <h1 className={styles.title}>Dashboard</h1>
+                    <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+                        <Link href="/admin/pages" className={styles.secondaryBtn} style={{ 
+                            textDecoration: 'none', 
+                            color: '#495057', 
+                            fontWeight: 600, 
+                            border: '1px solid #eef0f2',
+                            padding: '10px 20px',
+                            borderRadius: '99px',
+                            backgroundColor: '#fff'
+                        }}>
+                            Manage Pages
+                        </Link>
+                        <button onClick={() => {
+                            setEditingPost(null);
+                            setView('form');
+                        }} className={styles.addBtn}>
+                            + New Post
+                        </button>
+                        <button onClick={handleLogout} className={styles.secondaryBtn} style={{ background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}>
+                            Logout
+                        </button>
                     </div>
                 </div>
 
