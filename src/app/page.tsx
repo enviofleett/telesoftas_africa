@@ -1,3 +1,4 @@
+import { getPageContent } from "@/lib/content";
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
 import WhyWeExist from "@/components/WhyWeExist/WhyWeExist";
@@ -13,11 +14,22 @@ import Footer from "@/components/Footer/Footer";
 import WatermarkSection from "@/components/WatermarkSection/WatermarkSection";
 import styles from "./page.module.css";
 
-export default function Home() {
+// Revalidate page every 60 seconds (Incremental Static Regeneration)
+export const revalidate = 60;
+
+export default async function Home() {
+  const content = await getPageContent('home');
+  const heroData = content?.hero || {};
+
   return (
     <main className={styles.main}>
       <Navbar />
-      <Hero />
+      <Hero 
+        title={heroData.title}
+        subtext={heroData.subtext}
+        buttonText={heroData.buttonText}
+        buttonLink={heroData.buttonLink}
+      />
       <WhyWeExist />
       <ShowcaseImage />
       <ScaleSection />
