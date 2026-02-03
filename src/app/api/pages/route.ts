@@ -1,11 +1,15 @@
 import { createClient } from '@supabase/supabase-js';
 import { NextResponse } from 'next/server';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 // Use service role to bypass RLS for admin actions
-const supabase = createClient(supabaseUrl, serviceRoleKey);
+// Fallback to placeholder to prevent build errors if env vars are missing
+const supabase = createClient(
+    supabaseUrl || 'https://placeholder.supabase.co',
+    serviceRoleKey || 'placeholder'
+);
 
 export async function PUT(request: Request) {
     try {
