@@ -79,6 +79,31 @@ export default function EditPage() {
         }));
     };
 
+    const updateWhyField = (field: string, value: string) => {
+        setContent((prev: any) => ({
+            ...prev,
+            whyWeExist: {
+                ...prev.whyWeExist,
+                [field]: value
+            }
+        }));
+    };
+    
+    const updateWhySubtext = (index: number, value: string) => {
+        setContent((prev: any) => {
+            const currentSubtext = prev.whyWeExist?.subtext || ["", "", ""];
+            const newSubtext = [...currentSubtext];
+            newSubtext[index] = value;
+            return {
+                ...prev,
+                whyWeExist: {
+                    ...prev.whyWeExist,
+                    subtext: newSubtext
+                }
+            };
+        });
+    };
+
     if (loading) return <div className={styles.main}>Loading...</div>;
 
     return (
@@ -157,6 +182,44 @@ export default function EditPage() {
                                         style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ddd' }}
                                     />
                                 </div>
+                            </div>
+
+                            <hr style={{ margin: '40px 0', border: '0', borderTop: '1px solid #eee' }} />
+                            
+                            <h2 style={{ marginBottom: '20px', fontSize: '1.2rem' }}>Why We Exist Section</h2>
+
+                            <div style={{ marginBottom: '20px' }}>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>Title</label>
+                                <input 
+                                    type="text"
+                                    value={content.whyWeExist?.title || ''}
+                                    onChange={(e) => updateWhyField('title', e.target.value)}
+                                    style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ddd' }}
+                                />
+                            </div>
+
+                            <div style={{ marginBottom: '20px' }}>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>Description</label>
+                                <textarea 
+                                    value={content.whyWeExist?.description || ''}
+                                    onChange={(e) => updateWhyField('description', e.target.value)}
+                                    style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ddd', minHeight: '100px' }}
+                                />
+                            </div>
+
+                            <div style={{ marginBottom: '20px' }}>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>Key Points (Subtext)</label>
+                                {[0, 1, 2].map((index) => (
+                                    <div key={index} style={{ marginBottom: '10px' }}>
+                                        <input 
+                                            type="text"
+                                            value={content.whyWeExist?.subtext?.[index] || ''}
+                                            onChange={(e) => updateWhySubtext(index, e.target.value)}
+                                            placeholder={`Point ${index + 1}`}
+                                            style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ddd' }}
+                                        />
+                                    </div>
+                                ))}
                             </div>
                         </>
                     )}

@@ -20,6 +20,7 @@ export const revalidate = 60;
 export default async function Home() {
   const content = await getPageContent('home');
   const heroData = content?.hero || {};
+  const whyData = content?.whyWeExist || {};
 
   return (
     <main className={styles.main}>
@@ -30,7 +31,11 @@ export default async function Home() {
         buttonText={heroData.buttonText}
         buttonLink={heroData.buttonLink}
       />
-      <WhyWeExist />
+      <WhyWeExist 
+        title={whyData.title}
+        subtext={whyData.subtext}
+        description={whyData.description}
+      />
       <ShowcaseImage />
       <ScaleSection />
       <DigitalBackbone />
