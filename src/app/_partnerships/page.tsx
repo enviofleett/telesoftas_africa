@@ -1,15 +1,15 @@
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import HowWeWorkHero from "@/components/HowWeWorkHero/HowWeWorkHero";
-import ReadyToWork from "@/components/ReadyToWork/ReadyToWork";
+import PartnershipsContent from "@/components/PartnershipsContent/PartnershipsContent";
+import ContactContent from "@/components/ContactContent/ContactContent";
 import styles from "../page.module.css";
 
-export default function HowWeWorkPage() {
+export default function PartnershipsPage() {
     return (
         <main className={styles.main} style={{ background: '#ffffff' }}>
             <Navbar />
-            <HowWeWorkHero />
-            <ReadyToWork />
+            <PartnershipsContent />
+            <ContactContent />
             <Footer />
         </main>
     );

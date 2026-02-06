@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import ProofHero from "@/components/ProofHero/ProofHero";
 import ProofThemes from "@/components/ProofThemes/ProofThemes";
-import ReadyToWork from "@/components/ReadyToWork/ReadyToWork";
+import ContactContent from "@/components/ContactContent/ContactContent";
 import styles from "../page.module.css";
 
 export default function ProofPage() {
@@ -11,7 +11,7 @@ export default function ProofPage() {
             <Navbar />
             <ProofHero />
             <ProofThemes />
-            <ReadyToWork />
+            <ContactContent />
             <Footer />
         </main>
     );

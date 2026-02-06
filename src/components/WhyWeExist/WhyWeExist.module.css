@@ -1,10 +1,8 @@
 .section {
     width: 100%;
     display: flex;
-    justify-content: center;
-    /* Center the overall container area */
-    padding: 120px 87px 0 87px;
-    /* 87px margin from both edges of the screen, bottom 0 to connect to next section */
+    justify-content: flex-start;
+    padding: 120px 0 180px 0;
     background: #fff;
     color: #1a1a1a;
     position: relative;
@@ -12,28 +10,26 @@
 
 .container {
     width: 100%;
-    max-width: 1440px;
+    max-width: none;
+    margin: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: stretch;
-    /* Stretch to allow internal vertical alignment */
-    gap: 200px;
-    /* Large center gap matching reference image */
+    padding: 0 5% 0 100px;
+    gap: 0;
 }
 
 .leftContent {
-    flex: 0 0 450px;
+    flex: 0 0 calc(55vw - 100px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Top aligns title, bottom aligns subtext */
 }
 
 .title {
-    font-size: 84px;
+    font-size: 68px;
     font-weight: 500;
     line-height: 1;
-    /* Tighter line height for top alignment */
     margin: 0;
     letter-spacing: -0.04em;
     color: #1a1a1a;
@@ -53,68 +49,73 @@
 }
 
 .rightContent {
-    flex: 0 1 760px;
+    flex: 1;
     padding-top: 8px;
-    /* Minor adjustment to align top of text with cap height of title */
+    padding-left: 60px;
     text-align: left;
 }
 
 .description {
-    font-size: 28px;
-    line-height: 1.45;
-    /* Slightly increased for readability and line count */
+    font-size: 22px;
+    line-height: 1.5;
     font-weight: 400;
     color: #333;
     margin: 0;
-    max-width: 760px;
-    /* Adjusted to try and hit 6 lines */
+    max-width: 680px;
 }
 
 @media (max-width: 1400px) {
     .section {
-        padding: 100px 2rem 0;
+        padding: 100px 0 140px 0;
     }
 
     .container {
-        width: 100%;
+        padding: 0 5% 0 100px;
         gap: 80px;
     }
 
     .title {
-        font-size: 72px;
+        font-size: 58px;
     }
 
     .description {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }
 
 @media (max-width: 1024px) {
     .section {
-        padding: 80px 32px 0;
+        padding: 80px 0 100px 0;
     }
 
     .container {
+        padding: 0 5%;
+        max-width: 100%;
         gap: 60px;
     }
 
     .leftContent {
-        flex: 0 0 300px;
+        flex: 0 0 40%;
     }
 
     .title {
-        font-size: 48px;
+        font-size: 42px;
         white-space: normal;
     }
 
+    .rightContent {
+        padding-left: 0;
+    }
+
     .description {
-        font-size: 1.3rem;
+        font-size: 1.15rem;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 768px) {
     .section {
-        padding: 60px 24px 0;
+        padding: 60px 0 80px 0;
     }
 
     .container {
@@ -124,9 +125,10 @@
 
     .leftContent {
         width: 100%;
-        flex: 1;
+        flex: none;
         height: auto;
-        gap: 20px;
+        gap: 16px;
+        justify-content: flex-start;
     }
 
     .rightContent {
@@ -142,12 +144,13 @@
     .description {
         font-size: 1.15rem;
         line-height: 1.5;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .section {
-        padding: 50px 20px 0;
+        padding: 50px 0 60px 0;
     }
 
     .container {
@@ -160,5 +163,6 @@
 
     .description {
         font-size: 1rem;
+        max-width: 100%;
     }
 }

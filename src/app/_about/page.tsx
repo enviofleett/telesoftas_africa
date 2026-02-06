@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import AboutHero from "@/components/AboutHero/AboutHero";
 import AboutIntro from "@/components/AboutIntro/AboutIntro";
-import ReadyToWork from "@/components/ReadyToWork/ReadyToWork";
+import ContactContent from "@/components/ContactContent/ContactContent";
 import styles from "../page.module.css";
 
 export default function AboutPage() {
@@ -11,7 +11,7 @@ export default function AboutPage() {
             <Navbar />
             <AboutHero />
             <AboutIntro />
-            <ReadyToWork />
+            <ContactContent />
             <Footer />
         </main>
     );

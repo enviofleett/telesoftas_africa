@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import PostDetailHero from "@/components/PostDetailHero/PostDetailHero";
 import PostDetailContent from "@/components/PostDetailContent/PostDetailContent";
-import ReadyToWork from "@/components/ReadyToWork/ReadyToWork";
+import ContactContent from "@/components/ContactContent/ContactContent";
 import styles from "../../page.module.css"; // Reuse main styles for container if needed, or just layout
 
 // Generate static params for all posts
@@ -44,7 +44,7 @@ export default async function PostDetailPage({
                 readTime={post.readTime}
             />
             {post.content && <PostDetailContent content={post.content} />}
-            <ReadyToWork />
+            <ContactContent />
             <Footer />
         </main>
     );

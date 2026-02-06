@@ -3,7 +3,7 @@ import Footer from "@/components/Footer/Footer";
 import WhatWeDoHero from "@/components/WhatWeDoHero/WhatWeDoHero";
 import InstitutionalSection from "@/components/InstitutionalSection/InstitutionalSection";
 import TalentSection from "@/components/TalentSection/TalentSection";
-import ReadyToWork from "@/components/ReadyToWork/ReadyToWork";
+import ContactContent from "@/components/ContactContent/ContactContent";
 import styles from "../page.module.css";
 
 export default function WhatWeDoPage() {
@@ -13,7 +13,7 @@ export default function WhatWeDoPage() {
             <WhatWeDoHero />
             <InstitutionalSection />
             <TalentSection />
-            <ReadyToWork />
+            <ContactContent />
             <Footer />
         </main>
     );

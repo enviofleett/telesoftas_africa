@@ -28,16 +28,13 @@
 }
 
 .title {
-    font-size: 72px;
-    /* Reduced to ensure 3 lines fit in the container */
+    font-size: 58px;
     font-weight: 500;
     line-height: 1.05;
-    /* Slightly relaxed for better legibility with breaks */
     margin: 0;
     letter-spacing: -0.04em;
     color: #1a1a1a;
     white-space: pre-line;
-    /* Respect line breaks without premature wrapping */
 }
 
 .rightContent {
@@ -48,8 +45,8 @@
 }
 
 .description {
-    font-size: 28px;
-    line-height: 1.45;
+    font-size: 22px;
+    line-height: 1.5;
     font-weight: 400;
     color: #333;
     margin: 0;
@@ -65,11 +62,11 @@
     }
 
     .title {
-        font-size: 64px;
+        font-size: 50px;
     }
 
     .description {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -87,7 +84,7 @@
     }
 
     .title {
-        font-size: 44px;
+        font-size: 40px;
     }
 
     .rightContent {
@@ -95,7 +92,7 @@
     }
 
     .description {
-        font-size: 1.3rem;
+        font-size: 1.15rem;
     }
 }
 

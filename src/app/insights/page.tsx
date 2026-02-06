@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import InsightsHero from "@/components/InsightsHero/InsightsHero";
 import PopularPosts from "@/components/PopularPosts/PopularPosts";
 import NewInsights from "@/components/NewInsights/NewInsights";
-import ReadyToWork from "@/components/ReadyToWork/ReadyToWork";
+import ContactContent from "@/components/ContactContent/ContactContent";
 import Footer from "@/components/Footer/Footer";
 import styles from "../page.module.css";
 
@@ -13,7 +13,7 @@ export default function InsightsPage() {
             <InsightsHero />
             <PopularPosts />
             <NewInsights />
-            <ReadyToWork />
+            <ContactContent />
             <Footer />
         </main>
     );

@@ -27,20 +27,18 @@
     aspect-ratio: 16 / 9;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #fff;
-    /* Placeholder when no image */
     margin-top: 60px;
 }
 
 .featuredImage {
-    object-fit: contain;
-    padding: 60px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .title {
-    font-size: 80px;
+    font-size: 64px;
     font-weight: 500;
-    margin: 0 0 32px 0;
+    margin: 0 0 28px 0;
     line-height: 1.05;
     letter-spacing: -2px;
 }
@@ -54,8 +52,8 @@
 }
 
 .mainDescription p {
-    font-size: 22px;
-    line-height: 1.4;
+    font-size: 19px;
+    line-height: 1.5;
     color: #fff;
     margin-bottom: 24px;
     max-width: 600px;
@@ -110,7 +108,7 @@
     }
 
     .title {
-        font-size: 64px;
+        font-size: 52px;
     }
 }
 

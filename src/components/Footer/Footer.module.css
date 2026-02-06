@@ -1,19 +1,15 @@
 .footer {
     background-color: #0D0F14;
     color: #ffffff;
-    padding: 120px 10%;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    padding: 120px 5%;
     position: relative;
     z-index: 10;
-    margin-top: 0;
-    /* Eliminate black gap */
 }
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 80px;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 120px;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -21,7 +17,13 @@
 .brandSection {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
+}
+
+.logoAndGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .logoContainer {
@@ -31,40 +33,44 @@
 
 .logo {
     height: auto;
-    width: 200px;
+    width: 180px;
     filter: brightness(0) invert(1);
-    opacity: 0.9;
+}
+
+.groupName {
+    font-size: 14px;
+    color: #94969C;
+    margin-left: 56px;
+    /* Aligned under TeleSoftas text */
+    font-weight: 400;
 }
 
 .description {
     font-size: 14px;
     line-height: 1.8;
     color: #94969C;
-    max-width: 420px;
+    max-width: 440px;
     margin: 0;
 }
 
 .socialLinks {
     display: flex;
-    gap: 12px;
+    gap: 24px;
+    margin-top: 20px;
 }
 
 .socialIcon {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 20px;
+    color: #ffffff;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    transition: all 0.3s ease;
 }
 
 .socialIcon:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-4px);
+    color: #94969C;
+    transform: translateY(-2px);
 }
 
 .column {
@@ -113,29 +119,24 @@
 }
 
 .contactIcon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
     color: #ffffff;
+    margin-top: 3px;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
     .container {
-        gap: 40px;
+        gap: 60px;
+        grid-template-columns: 1.5fr 1fr 1fr;
     }
 }
 
 @media (max-width: 1024px) {
-    .footer {
-        z-index: 50;
-        /* Ensure it stays above content */
-    }
-
     .container {
         grid-template-columns: 1fr;
-        /* Switch to 1 column on tablet for guaranteed visibility */
         gap: 60px;
-        padding: 0 40px;
     }
 
     .brandSection {
@@ -146,56 +147,29 @@
 
 @media (max-width: 768px) {
     .footer {
-        padding: 80px 24px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        padding: 80px 5%;
     }
 
     .container {
         gap: 48px;
-        padding: 0;
     }
 
     .brandSection {
         padding-bottom: 0;
         border-bottom: none;
-        gap: 32px;
     }
 }
 
 @media (max-width: 480px) {
     .footer {
-        padding: 60px 20px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        padding: 60px 5%;
     }
 
-    .container {
-        gap: 40px;
+    .groupName {
+        margin-left: 48px;
     }
 
     .logo {
-        width: 160px;
-    }
-
-    .description {
-        font-size: 13px;
-    }
-
-    .columnTitle {
-        font-size: 18px;
-    }
-
-    .link {
-        font-size: 14px;
-    }
-
-    .socialIcon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .contactItem {
-        font-size: 14px;
+        width: 150px;
     }
 }

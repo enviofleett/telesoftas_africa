@@ -26,16 +26,24 @@ const EventsEcosystem = () => {
             <div className={styles.backgroundLayer}></div>
             <div className={styles.container}>
                 <div className={styles.leftContent}>
-                    <span className={styles.label}>Purpose</span>
                     <h2 className={styles.title}>Event and Ecosystem</h2>
+                    <span className={styles.label}>Purpose</span>
                     <div className={styles.description}>
                         <p>Demonstrate intentional presence and access.</p>
                         <p>We engage through carefully selected events and ecosystem initiatives designed to build meaningful relationships — not surface-level exposure. Events are not about visibility. They are about access, dialogue, and trust.</p>
                     </div>
-                    <Link href="/contact" className={styles.ctaButton}>
+                    <div className={styles.imageWrapper}>
+                        <img
+                            src="/eventneco.png"
+                            alt="Events and Ecosystem team"
+                            className={styles.eventImage}
+                        />
+                    </div>
+                    <Link href="/#contact" className={styles.ctaButton}>
                         Partner With Us on an Event
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <svg className={styles.buttonArrow} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                     </Link>
                 </div>

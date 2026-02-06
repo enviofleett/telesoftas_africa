@@ -36,7 +36,7 @@ const HowWeWork = () => {
 
                     <div className={styles.imageBox}>
                         <Image
-                            src="/shiny.svg"
+                            src="/wework.png"
                             alt="Process Illustration"
                             fill
                             className={styles.featuredImage}

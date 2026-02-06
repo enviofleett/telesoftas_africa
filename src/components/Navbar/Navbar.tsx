@@ -34,19 +34,18 @@ export default function Navbar() {
     }, [isMobileMenuOpen]);
 
     const dropdownLinks = [
-        { href: "/what-we-do", label: "What We Do" },
-        { href: "/partnerships", label: "Partnerships" },
-        { href: "/how-we-work", label: "How We Work" },
-        { href: "/events-ecosystem", label: "Events & Ecosystem" },
-        { href: "/growth-labs", label: "Growth Labs" },
+        { href: "/#what-we-do", label: "What We Do" },
+        { href: "/#partnerships", label: "Partnerships" },
+        { href: "/#how-we-work", label: "How We Work" },
+        { href: "/#events-ecosystem", label: "Events & Ecosystem" },
+        { href: "/#growth-labs", label: "Growth Labs" },
     ];
 
     const mainLinks = [
         { href: "/", label: "Home" },
-        { href: "/insights", label: "Insights" },
-        { href: "/about", label: "About" },
-        { href: "/contact", label: "Contact" },
-        { href: "/proof", label: "Proof" },
+        { href: "/insights", label: "Insight" },
+        { href: "/#contact", label: "contact" },
+        { href: "/#about", label: "About" },
     ];
 
     const closeMobileMenu = () => setIsMobileMenuOpen(false);
@@ -55,22 +54,23 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={styles.glassContainer}>
                 <div className={styles.logoContainer}>
-                    <Link href="/">
+                    <Link href="/" className={styles.logoLink}>
                         <img
                             src="/png 2.svg"
-                            alt="TeleSoftas Logo"
-                            className={styles.logoImage}
+                            alt="TeleSoftas Logo icon"
+                            className={styles.logoIcon}
                         />
+                        <span className={styles.brandName}>TeleSoftas</span>
                     </Link>
                 </div>
 
                 {/* Desktop Navigation */}
                 <div className={styles.navLinks}>
-                    <Link href="/" className={styles.link}>Home</Link>
-                    <Link href="/insights" className={styles.link}>Insights</Link>
-                    <Link href="/about" className={styles.link}>About</Link>
-                    <Link href="/contact" className={styles.link}>Contact</Link>
-                    <Link href="/proof" className={styles.link}>Proof</Link>
+                    {mainLinks.map((link) => (
+                        <Link key={link.href} href={link.href} className={styles.link}>
+                            {link.label}
+                        </Link>
+                    ))}
                 </div>
 
                 <div className={styles.dropdownWrapper} ref={dropdownRef}>
@@ -78,7 +78,7 @@ export default function Navbar() {
                         className={styles.exploreBtn}
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     >
-                        Explore Telesoftas
+                        Explore telesoftas
                         <svg
                             className={`${styles.chevron} ${isDropdownOpen ? styles.chevronUp : ''}`}
                             width="16"
@@ -142,7 +142,7 @@ export default function Navbar() {
                         ))}
                     </div>
                     <div className={styles.mobileMenuSection}>
-                        <span className={styles.mobileMenuLabel}>Explore Telesoftas</span>
+                        <span className={styles.mobileMenuLabel}>explore telesoftas</span>
                         {dropdownLinks.map((link) => (
                             <Link
                                 key={link.href}

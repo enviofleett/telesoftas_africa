@@ -1,104 +1,21 @@
 .hero {
     position: relative;
     height: 100vh;
-    /* One frame view */
     width: 100%;
-    background-color: #fff;
     display: flex;
     align-items: center;
     overflow: hidden;
     padding: 0;
+    background-color: #f0f0f0;
 }
 
-
-.container {
-    width: 100%;
-    margin: 0;
-    max-width: 1600px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    padding: 0 5% 0 100px;
-    /* Preferred side padding */
-}
-
-.leftContent {
-    flex: 0 0 50%;
-    /* Slightly narrower to shift away from image */
-    display: flex;
-    flex-direction: column;
-    gap: 56px;
-    /* Increased gap for breathing room */
-    padding-right: 60px;
-    /* More space from the image edge */
-    position: relative;
-    z-index: 1;
-}
-
-.animationBackground {
+.backgroundWrapper {
     position: absolute;
     top: 0;
     left: 0;
-    width: 58%;
+    width: 100%;
     height: 100%;
     z-index: 1;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.title {
-    font-family: var(--font-plus-jakarta), sans-serif;
-    font-weight: 500;
-    font-size: 92px;
-    /* Large, bold as in image */
-    line-height: 1.05;
-    letter-spacing: -3px;
-    color: #000;
-    margin: 0;
-}
-
-.description {
-    font-size: 24px;
-    line-height: 1.5;
-    color: #333;
-    max-width: 580px;
-    margin: 0;
-    font-weight: 400;
-}
-
-.convButton {
-    background: #000;
-    color: #fff;
-    padding: 20px 48px;
-    border-radius: 10px;
-    font-size: 1.15rem;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    transition: transform 0.2s ease;
-    width: fit-content;
-}
-
-.convButton:hover {
-    transform: translateY(-2px);
-}
-
-.arrowIcon {
-    width: 20px;
-    height: 20px;
-}
-
-.rightContent {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    z-index: 1;
-    filter: none;
 }
 
 .heroImage {
@@ -106,129 +23,151 @@
     object-position: center !important;
 }
 
-@media (max-width: 1440px) {
-    .title {
-        font-size: 80px;
-    }
+.container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
-@media (max-width: 1200px) {
+.whiteBox {
+    background-color: #ffffff;
+    width: 46%;
+    padding: 80px 80px 100px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    color: #000;
+    margin: 0;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 480px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.convButton {
+    background: #000;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.2s ease;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.convButton:hover {
+    transform: translateY(-2px);
+    background: #1a1a1a;
+}
+
+.arrowIcon {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 1280px) {
+    .whiteBox {
+        width: 55%;
+        padding: 60px 60px 60px 80px;
+    }
+
     .title {
-        font-size: 64px;
+        font-size: 48px;
     }
 }
 
 @media (max-width: 1024px) {
     .hero {
-        height: 85vh;
-        /* Cut down from 100svh */
-        min-height: auto;
-        position: relative;
-        padding: 0;
-        background: #000;
+        height: 100vh;
+        min-height: 600px;
     }
 
-    /* Move the image to the background of the entire section */
-    .rightContent {
+    .backgroundWrapper {
         position: absolute;
-        inset: 0;
-        width: 100%;
         height: 100%;
-        z-index: 1;
-        order: none;
-        margin: 0;
-        filter: brightness(0.5);
-        /* Dim image to make text pop */
-    }
-
-    .heroImage {
-        border-radius: 0;
+        filter: brightness(0.4);
     }
 
     .container {
-        position: relative;
-        z-index: 2;
         height: 100%;
-        display: flex;
-        flex-direction: column;
+        padding: 0 24px;
         justify-content: center;
         align-items: center;
-        padding: 0 5%;
-        text-align: center;
-        max-width: 100%;
-        gap: 0;
     }
 
-    .animationBackground {
-        display: none;
-    }
-
-    .leftContent {
-        max-width: 700px;
+    .whiteBox {
+        width: 100%;
+        max-width: 600px;
+        background-color: transparent;
         padding: 0;
-        gap: 40px;
+        box-shadow: none;
         align-items: center;
+        text-align: center;
     }
 
     .title {
-        font-size: 64px;
-        /* Increased from 52px */
-        line-height: 1.05;
+        font-size: 42px;
         color: #fff;
-        letter-spacing: -2px;
     }
 
     .description {
-        font-size: 1.35rem;
+        font-size: 1.15rem;
         color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 24px;
         max-width: 550px;
+        margin-bottom: 8px;
     }
 
     .convButton {
-        width: auto !important;
-        min-width: 0 !important;
-        padding: 16px 44px !important;
         background: #fff;
         color: #000;
-        white-space: nowrap;
-        font-size: 1.1rem;
+        padding: 16px 36px;
     }
 }
 
 @media (max-width: 768px) {
     .title {
-        font-size: 56px;
-        /* Increased from 44px */
+        font-size: 36px;
     }
 
     .description {
-        font-size: 1.15rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        height: 80vh;
-        /* Further cut down for mobile */
+        height: 100svh;
     }
 
     .title {
-        font-size: 48px;
-        /* Increased from 38px */
-        letter-spacing: -1.5px;
+        font-size: 32px;
     }
 
     .description {
-        font-size: 1.1rem;
-    }
-
-    .leftContent {
-        gap: 32px;
-    }
-
-    .convButton {
-        padding: 14px 36px !important;
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 }

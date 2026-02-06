@@ -1,15 +1,17 @@
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import ReadyToWork from "@/components/ReadyToWork/ReadyToWork";
+import EventsHero from "@/components/EventsHero/EventsHero";
+import EventsCards from "@/components/EventsCards/EventsCards";
 import ContactContent from "@/components/ContactContent/ContactContent";
 import styles from "../page.module.css";
 
-export default function ContactPage() {
+export default function EventsEcosystemPage() {
     return (
-        <main className={styles.main}>
+        <main className={styles.main} style={{ background: '#ffffff' }}>
             <Navbar />
+            <EventsHero />
+            <EventsCards />
             <ContactContent />
-            <ReadyToWork />
             <Footer />
         </main>
     );

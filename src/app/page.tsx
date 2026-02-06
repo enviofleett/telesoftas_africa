@@ -9,7 +9,8 @@ import WhatWeDo from "@/components/WhatWeDo/WhatWeDo";
 import HowWeWork from "@/components/HowWeWork/HowWeWork";
 import Insights from "@/components/Insights/Insights";
 import EventsEcosystem from "@/components/EventsEcosystem/EventsEcosystem";
-import ReadyToWork from "@/components/ReadyToWork/ReadyToWork";
+import Partnerships from "@/components/Partnerships/Partnerships";
+import ContactContent from "@/components/ContactContent/ContactContent";
 import Footer from "@/components/Footer/Footer";
 import WatermarkSection from "@/components/WatermarkSection/WatermarkSection";
 import styles from "./page.module.css";
@@ -25,26 +26,41 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <Navbar />
-      <Hero 
+      <Hero
         title={heroData.title}
         subtext={heroData.subtext}
         buttonText={heroData.buttonText}
         buttonLink={heroData.buttonLink}
       />
-      <WhyWeExist 
-        title={whyData.title}
-        subtext={whyData.subtext}
-        description={whyData.description}
-      />
+      <section id="about">
+        <WhyWeExist
+          title={whyData.title}
+          subtext={whyData.subtext}
+          description={whyData.description}
+        />
+      </section>
       <ShowcaseImage />
-      <ScaleSection />
+      <section id="proof">
+        <ScaleSection />
+      </section>
       <DigitalBackbone />
-      <WhatWeDo />
+      <section id="what-we-do">
+        <WhatWeDo />
+      </section>
       <WatermarkSection />
-      <HowWeWork />
+      <section id="how-we-work">
+        <HowWeWork />
+      </section>
       <Insights />
-      <EventsEcosystem />
-      <ReadyToWork />
+      <section id="events-ecosystem">
+        <EventsEcosystem />
+      </section>
+      <section id="partnerships">
+        <Partnerships />
+      </section>
+      <section id="contact">
+        <ContactContent />
+      </section>
       <Footer />
     </main>
   );

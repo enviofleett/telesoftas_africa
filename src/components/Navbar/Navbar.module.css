@@ -5,21 +5,19 @@
     width: 100%;
     z-index: 1000;
     background: #ffffff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .glassContainer {
     position: relative;
-    overflow: visible;
     width: 100%;
     max-width: 1600px;
-    margin: 0;
-    height: 100px;
+    margin: 0 auto;
+    height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
-    gap: 10px;
+    padding: 0 5%;
 }
 
 .logoContainer {
@@ -27,8 +25,15 @@
     align-items: center;
 }
 
-.logoImage {
-    height: 40px;
+.logoLink {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logoIcon {
+    height: 48px;
     width: auto;
     display: block;
     filter: brightness(0);
@@ -36,19 +41,22 @@
 
 .navLinks {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     align-items: center;
+    margin-right: 2rem;
+    margin-left: auto;
 }
 
 .link {
-    color: #000;
-    font-weight: 400;
-    font-size: 1.1rem;
-    transition: opacity 0.2s ease;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .link:hover {
-    opacity: 0.7;
+    color: #000;
 }
 
 .dropdownWrapper {
@@ -58,18 +66,20 @@
 .exploreBtn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 0.75rem 1.8rem;
+    gap: 10px;
+    padding: 12px 28px;
+    border: none;
     border-radius: 10px;
-    font-weight: 600;
-    font-size: 1.05rem;
+    font-weight: 500;
+    font-size: 0.95rem;
     background: #000;
     color: #fff;
-    transition: transform 0.2s ease, background 0.3s ease;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
 }
 
 .exploreBtn:hover {
-    transform: scale(1.05);
     background: #222;
 }
 
@@ -85,14 +95,12 @@
     position: absolute;
     top: calc(100% + 12px);
     right: 0;
-    min-width: 220px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-    padding: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     z-index: 1001;
     display: flex;
     flex-direction: column;
@@ -101,17 +109,18 @@
 
 .dropdownLink {
     display: block;
-    padding: 12px 16px;
-    color: #000;
-    font-size: 0.95rem;
+    padding: 10px 16px;
+    color: #333;
+    font-size: 0.9rem;
     font-weight: 500;
-    border-radius: 10px;
-    transition: background 0.2s ease;
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease;
     text-decoration: none;
 }
 
 .dropdownLink:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.04);
+    color: #000;
 }
 
 /* Hamburger Menu Button */
@@ -128,6 +137,7 @@
     cursor: pointer;
     padding: 10px;
     z-index: 1002;
+    margin-left: 1rem;
 }
 
 .hamburgerLine {
@@ -228,62 +238,54 @@
 }
 
 /* Tablet Breakpoint */
+@media (max-width: 1280px) {
+    .glassContainer {
+        padding: 0 40px;
+    }
+}
+
 @media (max-width: 1024px) {
     .navLinks {
         gap: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .link {
+        font-size: 0.9rem;
     }
 
     .exploreBtn {
-        padding: 0.5rem 1rem;
+        padding: 10px 22px;
         font-size: 0.85rem;
     }
 }
 
 /* Mobile Breakpoint */
-@media (max-width: 768px) {
-    .glassContainer {
-        height: 70px;
-        padding: 0 20px;
-    }
-
+@media (max-width: 900px) {
     .navLinks {
         display: none;
     }
 
     .dropdownWrapper {
-        display: none;
+        margin-left: auto;
     }
 
     .hamburger {
         display: flex;
     }
-
-    .dropdown {
-        right: -20px;
-    }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
     .glassContainer {
-        height: 60px;
-        padding: 0 16px;
+        height: 70px;
+        padding: 0 20px;
     }
 
-    .logoImage {
-        height: 26px;
+    .logoIcon {
+        height: 36px;
     }
 
-    .mobileMenu {
-        width: 85%;
-    }
-
-    .mobileMenuContent {
-        padding: 80px 20px 30px 20px;
-    }
-
-    .mobileMenuLink {
-        font-size: 1rem;
-        padding: 10px 0;
+    .exploreBtn {
+        display: none;
     }
 }
