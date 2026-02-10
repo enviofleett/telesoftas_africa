@@ -27,9 +27,7 @@ const EventsEcosystem = () => {
             <div className={styles.container}>
                 <div className={styles.leftContent}>
                     <h2 className={styles.title}>Event and Ecosystem</h2>
-                    <span className={styles.label}>Purpose</span>
                     <div className={styles.description}>
-                        <p>Demonstrate intentional presence and access.</p>
                         <p>We engage through carefully selected events and ecosystem initiatives designed to build meaningful relationships — not surface-level exposure. Events are not about visibility. They are about access, dialogue, and trust.</p>
                     </div>
                     <div className={styles.imageWrapper}>

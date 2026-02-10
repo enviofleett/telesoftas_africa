@@ -27,10 +27,7 @@ const HowWeWork = () => {
             <div className={styles.container}>
                 <div className={styles.leftContent}>
                     <h2 className={styles.title}>How we work</h2>
-                    <span className={styles.label}>Purpose</span>
-
                     <div className={styles.mainDescription}>
-                        <p>Operationalise the brand promise.</p>
                         <p>Being the best partner for growth requires more than capability. It requires clarity, discipline, and shared responsibility. Our approach ensures growth is not accidental, but engineered.</p>
                     </div>
 

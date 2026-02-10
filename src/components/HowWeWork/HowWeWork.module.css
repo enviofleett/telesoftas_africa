@@ -43,14 +43,6 @@
     letter-spacing: -2px;
 }
 
-.label {
-    color: #ff0055;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 40px;
-    display: block;
-}
-
 .mainDescription p {
     font-size: 18px;
     line-height: 1.5;
@@ -185,11 +177,6 @@
     .title {
         font-size: 32px;
         letter-spacing: -1px;
-        margin-bottom: 20px;
-    }
-
-    .label {
-        font-size: 14px;
         margin-bottom: 20px;
     }
 
