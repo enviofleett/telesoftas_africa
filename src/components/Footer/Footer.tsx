@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import styles from "./Footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -56,7 +56,10 @@ export default function Footer() {
                 <div className={styles.column}>
                     <h3 className={styles.columnTitle}>Contact</h3>
                     <div className={styles.contactInfo}>
-                        
+                        <div className={styles.contactItem}>
+                            <FaPhoneAlt className={styles.contactIcon} />
+                            <span>+23490-46-71-24-57</span>
+                        </div>
                         <div className={styles.contactItem}>
                             <FaEnvelope className={styles.contactIcon} />
                             <span>hello@telesoftas.africa</span>
