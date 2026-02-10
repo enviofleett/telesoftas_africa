@@ -40,7 +40,7 @@ export default function ContactContent() {
                         </div>
                         <div className={styles.contactItem}>
                             <FaPhoneAlt className={styles.contactIcon} />
-                            <span>+234 123 654 7890</span>
+                            <span>+2349046712457</span>
                         </div>
                     </div>
 

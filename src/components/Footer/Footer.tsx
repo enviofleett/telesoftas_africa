@@ -58,7 +58,7 @@ export default function Footer() {
                     <div className={styles.contactInfo}>
                         <div className={styles.contactItem}>
                             <FaPhoneAlt className={styles.contactIcon} />
-                            <span>+23490-46-71-24-57</span>
+                            <span>+2349046712457</span>
                         </div>
                         <div className={styles.contactItem}>
                             <FaEnvelope className={styles.contactIcon} />
