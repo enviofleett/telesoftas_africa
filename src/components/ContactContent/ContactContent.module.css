@@ -98,7 +98,7 @@
 
 .heroText h2 {
     font-family: var(--font-plus-jakarta), sans-serif;
-    font-size: 3.5rem;
+    font-size: 42px;
     font-weight: 500;
     /* Reduced from 700 */
     color: #333;
@@ -110,7 +110,7 @@
 
 .heroText p {
     font-family: var(--font-inter), sans-serif;
-    font-size: 1.25rem;
+    font-size: 16px;
     color: #666;
     line-height: 1.8;
     /* More relaxed line height */
@@ -121,7 +121,7 @@
 /* Reuse existing social styling but align left */
 .label {
     font-family: var(--font-inter), sans-serif;
-    font-size: 1.1rem;
+    font-size: 16px;
     color: #999;
     font-weight: 400;
     margin-bottom: 16px;
@@ -149,7 +149,7 @@
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    font-size: 1.1rem;
+    font-size: 16px;
     color: #666;
     font-family: var(--font-inter), sans-serif;
     line-height: 1.5;

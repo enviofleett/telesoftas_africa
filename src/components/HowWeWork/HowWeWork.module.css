@@ -36,7 +36,7 @@
 }
 
 .title {
-    font-size: 64px;
+    font-size: 42px;
     font-weight: 500;
     margin: 0 0 28px 0;
     line-height: 1.05;
@@ -52,7 +52,7 @@
 }
 
 .mainDescription p {
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.5;
     color: #fff;
     margin-bottom: 24px;
@@ -80,7 +80,7 @@
 }
 
 .stepDescription {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.7);
 }

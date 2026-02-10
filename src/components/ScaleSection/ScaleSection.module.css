@@ -2,8 +2,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 60px 87px 120px 87px;
-    /* Reduced top padding from 120px to 60px */
+    padding: 100px 120px;
+    /* Adjusted padding */
     background: #fff;
     color: #1a1a1a;
     position: relative;
@@ -12,7 +12,7 @@
 
 .container {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1388px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -28,7 +28,7 @@
 }
 
 .title {
-    font-size: 58px;
+    font-size: 42px;
     font-weight: 500;
     line-height: 1.05;
     margin: 0;
@@ -45,7 +45,7 @@
 }
 
 .description {
-    font-size: 22px;
+    font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
     color: #333;

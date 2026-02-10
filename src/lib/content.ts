@@ -9,7 +9,9 @@ export async function getPageContent(slug: string) {
             .single();
 
         if (error) {
-            console.error(`Error fetching page content for ${slug}:`, error);
+            if (error.code !== 'PGRST116') { // Ignore "no rows returned" error
+                console.warn(`Warning: Could not fetch page content for ${slug}`, error.message);
+            }
             return null;
         }
 

@@ -2,7 +2,6 @@ import { getPageContent } from "@/lib/content";
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
 import WhyWeExist from "@/components/WhyWeExist/WhyWeExist";
-import ShowcaseImage from "@/components/ShowcaseImage/ShowcaseImage";
 import ScaleSection from "@/components/ScaleSection/ScaleSection";
 import DigitalBackbone from "@/components/DigitalBackbone/DigitalBackbone";
 import WhatWeDo from "@/components/WhatWeDo/WhatWeDo";
@@ -39,11 +38,10 @@ export default async function Home() {
           description={whyData.description}
         />
       </section>
-      <ShowcaseImage />
+      <DigitalBackbone />
       <section id="proof">
         <ScaleSection />
       </section>
-      <DigitalBackbone />
       <section id="what-we-do">
         <WhatWeDo />
       </section>
