@@ -6,7 +6,7 @@ export default function ScaleSection() {
             <div className={styles.container}>
                 <div className={styles.leftContent}>
                     <h2 className={styles.title}>
-                        Built for system.<br />
+                        Built for systems.<br />
                         Proven at National<br />
                         scale.
                     </h2>
