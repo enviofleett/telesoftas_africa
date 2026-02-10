@@ -30,13 +30,12 @@ export default function ContactContent() {
                     <div className={styles.contactInfo}>
                         <div className={styles.contactItem}>
                             <FaEnvelope className={styles.contactIcon} />
-                            <span>example@teamwebflow.com</span>
+                            <span>hello@telesoftas.africa</span>
                         </div>
                         <div className={styles.contactItem}>
                             <FaMapMarkerAlt className={styles.contactIcon} />
                             <span>
-                                4074 Ebert Summit Suite 375<br />
-                                Lake Leonardchester
+                                57 Ebitu Ukiwe Street Jabi Abuja, Nigeria
                             </span>
                         </div>
                         <div className={styles.contactItem}>
