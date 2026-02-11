@@ -5,19 +5,22 @@ import styles from './WhatWeDo.module.css';
 const WhatWeDo = () => {
     const cards = [
         {
-            title: "Digital Products & Platforms",
+            title: <>Digital Products &<br />Platforms</>,
             description: "Scalable software and systems built to last.",
             image: "/analy.png",
+            imageAlt: "Digital Products & Platforms"
         },
         {
             title: "Growth & Digital Transformation",
             description: "Strategy-led initiatives that unlock efficiency and new growth pathways.",
             image: "/growanl.png",
+            imageAlt: "Growth & Digital Transformation"
         },
         {
             title: "Talent & Delivery Partnerships",
             description: "High-performing teams embedded to deliver outcomes.",
             image: "/growth.png",
+            imageAlt: "Talent & Delivery Partnerships"
         }
     ];
 
@@ -35,7 +38,7 @@ const WhatWeDo = () => {
                         <div className={styles.imageContainer}>
                             <Image
                                 src={card.image}
-                                alt={card.title}
+                                alt={card.imageAlt}
                                 width={300}
                                 height={250}
                                 className={styles.cardImage}

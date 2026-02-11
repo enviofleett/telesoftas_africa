@@ -2,7 +2,7 @@
     position: relative;
     background-color: #0b0d11;
     color: #fff;
-    padding: 120px 0 80px 0;
+    padding: 180px 0 200px 0;
     /* Reduced bottom padding */
     overflow: hidden;
     min-height: 700px;
@@ -120,15 +120,7 @@
     max-width: 500px;
 }
 
-.verticalLine {
-    position: absolute;
-    top: 40px;
-    left: 28px;
-    width: 1px;
-    height: calc(100% - 100px);
-    background: rgba(255, 255, 255, 0.2);
-    z-index: 0;
-}
+
 
 .step {
     display: flex;

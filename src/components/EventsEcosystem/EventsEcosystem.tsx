@@ -48,7 +48,6 @@ const EventsEcosystem = () => {
 
                 <div className={styles.rightContent}>
                     <div className={styles.timeline}>
-                        <div className={styles.verticalLine}></div>
                         {steps.map((step, index) => (
                             <div key={index} className={styles.step}>
                                 <div className={styles.numberCircle}>{step.number}</div>
