@@ -33,10 +33,14 @@ export default function ContactForm() {
                 setMessage({ text: "Thank you! We will get back to you within 24 hours.", type: "success" });
                 setFormData({ name: "", email: "", phone: "", service: "" });
             } else {
-                setMessage({ text: "Something went wrong. Please try again.", type: "error" });
+                    const mailto = `mailto:hello@telesoftas.africa?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(formData.name)}%0AEmail:%20${encodeURIComponent(formData.email)}%0APhone:%20${encodeURIComponent(formData.phone)}%0AService:%20${encodeURIComponent(formData.service)}`;
+                    window.location.href = mailto;
+                    setMessage({ text: "Redirecting to your email app…", type: "success" });
             }
         } catch (error) {
-            setMessage({ text: "Error sending message. Please check your connection.", type: "error" });
+            const mailto = `mailto:hello@telesoftas.africa?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(formData.name)}%0AEmail:%20${encodeURIComponent(formData.email)}%0APhone:%20${encodeURIComponent(formData.phone)}%0AService:%20${encodeURIComponent(formData.service)}`;
+            window.location.href = mailto;
+            setMessage({ text: "Redirecting to your email app…", type: "success" });
         } finally {
             setLoading(false);
         }
