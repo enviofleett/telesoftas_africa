@@ -38,7 +38,6 @@ export default function Navbar() {
         { href: "/#partnerships", label: "Partnerships" },
         { href: "/#how-we-work", label: "How We Work" },
         { href: "/#events-ecosystem", label: "Events & Ecosystem" },
-        { href: "/#growth-labs", label: "Growth Labs" },
     ];
 
     const mainLinks = [
