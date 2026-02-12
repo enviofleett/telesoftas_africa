@@ -43,7 +43,6 @@ export default function Navbar() {
 
     const mainLinks = [
         { href: "/", label: "Home" },
-        { href: "/insights", label: "Insight" },
         { href: "/#contact", label: "contact" },
         { href: "/#about", label: "About" },
     ];
