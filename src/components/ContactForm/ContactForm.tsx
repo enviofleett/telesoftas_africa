@@ -58,7 +58,6 @@ export default function ContactForm() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="i.e. John Doe"
                     className={styles.input}
                 />
             </div>
@@ -71,7 +70,6 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    placeholder="i.e. john@mail.com"
                     className={styles.input}
                 />
             </div>
@@ -84,7 +82,6 @@ export default function ContactForm() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    placeholder="i.e. 123-456-7890"
                     className={styles.input}
                 />
             </div>
@@ -98,7 +95,6 @@ export default function ContactForm() {
                     required
                     className={styles.select}
                 >
-                    <option value="" disabled>Select a service</option>
                     <option value="Software Development">Software Development</option>
                     <option value="UI/UX Design">UI/UX Design</option>
                     <option value="Consulting">Consulting</option>
