@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import ContactForm from "../ContactForm/ContactForm";
 import styles from "./ContactContent.module.css";
 
@@ -60,16 +60,10 @@ export default function ContactContent() {
                     <div className={styles.followUsSection}>
                         <span className={styles.label}>Follow Us</span>
                         <div className={styles.socialGrid}>
-                            <Link href="#" className={styles.socialLink} aria-label="Facebook">
-                                <FaFacebookF />
-                            </Link>
-                            <Link href="#" className={styles.socialLink} aria-label="Twitter">
-                                <FaTwitter />
-                            </Link>
-                            <Link href="#" className={styles.socialLink} aria-label="LinkedIn">
+                            <Link href="https://ng.linkedin.com/company/telesoftas-africa" className={styles.socialLink} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                                 <FaLinkedinIn />
                             </Link>
-                            <Link href="#" className={styles.socialLink} aria-label="Instagram">
+                            <Link href="https://www.instagram.com/telesoftas.africa/" className={styles.socialLink} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                                 <FaInstagram />
                             </Link>
                         </div>
