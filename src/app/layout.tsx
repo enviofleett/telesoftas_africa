@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/png 2.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.png", type: "image/png", sizes: "16x16" },
     ],
-    shortcut: ["/favicon.ico"],
-    apple: [{ url: "/readyyy.png", sizes: "180x180" }],
+    shortcut: ["/favicon.png"],
+    apple: [{ url: "/favicon.png", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
