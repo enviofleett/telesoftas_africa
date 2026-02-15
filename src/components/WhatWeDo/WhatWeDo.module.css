@@ -138,7 +138,7 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 60px 24px 40px;
+        padding: 100px 24px 80px;
     }
 
     .title {
@@ -161,12 +161,14 @@
 
     .type {
         font-size: 1.3rem;
+        text-align: center;
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
     .section {
-        padding: 60px 16px 30px;
+        padding: 100px 16px 80px;
     }
 
     .title {
@@ -188,6 +190,7 @@
 
     .cardImage {
         max-height: 160px;
+        margin: 0 auto;
     }
 
     .type {
