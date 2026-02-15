@@ -84,9 +84,10 @@
     }
 
     .headerDescription {
-        font-size: 24px;
+        font-size: 1.2rem;
     }
 }
+
 
 @media (max-width: 1024px) {
     .cardsGrid {
@@ -96,11 +97,11 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 100px 0;
+        padding: 140px 48px;
     }
 
     .headerDescription {
-        font-size: 24px;
+        font-size: 1.15rem;
     }
 
     .cardsGrid {
@@ -110,22 +111,49 @@
     .imageContainer {
         height: 250px;
     }
+
+    .cardContent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .cardTitle,
+    .cardDescription {
+        text-align: left;
+    }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 20px;
+        padding: 0 48px;
     }
 
     .section {
-        padding: 100px 0;
+        padding: 140px 0;
     }
 
     .headerDescription {
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     .cardContent {
-        padding: 24px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .cardTitle {
+        font-size: 1.15rem;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+
+    .cardDescription {
+        font-size: 0.85rem;
+        text-align: left;
     }
 }

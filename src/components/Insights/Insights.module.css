@@ -123,11 +123,11 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 100px 0 120px 0;
+        padding: 140px 0 140px 0;
     }
 
     .container {
-        padding: 0 20px;
+        padding: 0 48px;
     }
 
     .header {
@@ -165,11 +165,11 @@
 
 @media (max-width: 480px) {
     .section {
-        padding: 100px 0 120px 0;
+        padding: 140px 0 140px 0;
     }
 
     .container {
-        padding: 0 16px;
+        padding: 0 48px;
     }
 
     .title {

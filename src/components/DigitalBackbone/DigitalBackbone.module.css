@@ -42,16 +42,22 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 100px 20px;
+        padding: 140px 48px;
     }
 
     .pillTitle {
-        font-size: 1rem;
-        padding: 10px 24px;
+        font-size: 0.95rem;
+        padding: 8px 20px;
+        white-space: normal;
+        line-height: 1.4;
+        display: block;
+        max-width: 90%;
+        margin: 0 auto;
     }
 
     .description {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.6;
+        text-align: left;
     }
 }

@@ -109,7 +109,7 @@
 @media (max-width: 1200px) {
     .cardsGrid {
         grid-template-columns: 1fr;
-        max-width: 550px;
+        max-width: 400px;
     }
 
     .card {
@@ -138,7 +138,7 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 100px 24px 80px;
+        padding: 140px 48px 80px;
     }
 
     .title {
@@ -156,19 +156,36 @@
     }
 
     .imageContainer {
-        height: 200px;
+        height: 160px;
+        justify-content: center;
+    }
+
+    .cardContent {
+        text-align: center;
+        align-items: center;
     }
 
     .type {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         text-align: center;
-        justify-content: center;
+        margin-bottom: 12px;
+        min-height: auto;
+        display: block;
+        width: 100%;
+    }
+
+    .description {
+        font-size: 0.95rem;
+        text-align: center;
+        width: 100%;
+        display: block;
     }
 }
 
+
 @media (max-width: 480px) {
     .section {
-        padding: 100px 16px 80px;
+        padding: 140px 48px 120px;
     }
 
     .title {
@@ -189,16 +206,25 @@
     }
 
     .cardImage {
-        max-height: 160px;
+        max-height: 140px;
         margin: 0 auto;
     }
 
     .type {
         font-size: 1.2rem;
         margin-bottom: 12px;
+        text-align: center;
+        display: block;
+        width: 100%;
     }
 
     .description {
         font-size: 0.9rem;
+        text-align: center;
+        width: 100%;
+        display: block;
+        -webkit-line-clamp: initial;
+        line-clamp: initial;
+        overflow: visible;
     }
 }

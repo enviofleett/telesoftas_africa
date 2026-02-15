@@ -152,7 +152,11 @@
 
 @media (max-width: 480px) {
     .section {
-        padding: 100px 0 120px 0;
+        padding: 140px 0 140px 0;
+    }
+
+    .container {
+        padding: 0 48px;
     }
 
     .container {
