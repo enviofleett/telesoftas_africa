@@ -53,6 +53,7 @@
     letter-spacing: -0.02em;
     white-space: nowrap;
     /* Force the title to stay on one line */
+    color: #ffffff;
 }
 
 .description p {
